@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academics | FKND Foundation Learning Centre</title>
+  <meta name="description" content="Explore our academic divisions, STEM labs, curriculum, and learner support at FKND Foundation Learning Centre.">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       DALLAS ISD INSPIRED: SPACIOUS CENTERED NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container-spacious">
+      <nav class="nav-wing nav-wing-left" aria-label="Primary Left Navigation">
+        <a href="index.html" class="nav-anchor">Home</a>
+        <a href="about.html" class="nav-anchor">About</a>
+        <a href="contact.html" class="nav-anchor">Contact</a>
+      </nav>
+
+      <a href="index.html" class="nav-center-brand" aria-label="FKND Foundation Learning Centre Homepage">
+        <div class="brand-crest-frame">
+          <img src="logo.jpeg" alt="FKND Foundation Learning Centre Crest">
+        </div>
+      </a>
+
+      <nav class="nav-wing nav-wing-right" aria-label="Primary Right Navigation">
+        <a href="admissions.html" class="nav-anchor">Admissions</a>
+        <a href="gallery.html" class="nav-anchor">Gallery</a>
+        <a href="blog.html" class="nav-anchor">Blog</a>
+        <button class="btn btn-apply btn-sm nav-apply-btn" data-open-modal="applyModal">
+          APPLY NOW
+        </button>
+        <button class="nav-menu-btn" id="desktopNavMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+          <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+            <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+            <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+            <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <span class="menu-label-text">
+            <span class="label-open">Menu</span>
+            <span class="label-close">Close</span>
+          </span>
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+        <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+          <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span class="menu-label-text">
+          <span class="label-open">Menu</span>
+          <span class="label-close">Close</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Backdrop Scrim Overlay -->
+    <div class="site-dropdown-backdrop" id="siteDropdownBackdrop" aria-hidden="true"></div>
+
+    <!-- Floating Dropdown Menu Card (Desktop & Mobile - Complete Navigation Grid) -->
+    <div class="site-dropdown-menu" id="siteDropdownMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+      <div class="dropdown-status-banner">
+        <span class="status-pulse-dot"></span>
+        <span class="status-text">Admissions Open &bull; 2026/2027 Year</span>
+        <a href="admissions.html" class="status-link">Apply &rarr;</a>
+      </div>
+
+      <div class="dropdown-menu-header">
+        <div class="dropdown-brand-mini">
+          <img src="logo.jpeg" alt="FKND Crest">
+          <div>
+            <strong>FKND LEARNING CENTRE</strong>
+            <span>“Hope for a Cut Down Tree”</span>
+          </div>
+        </div>
+        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close menu">✕</button>
+      </div>
+
+      <nav class="dropdown-links-grid" aria-label="Site Links">
+        <a href="index.html" class="dropdown-link-card" style="--delay: 1">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Home</span>
+            <span class="dropdown-link-desc">Overview & Welcome</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="about.html" class="dropdown-link-card" style="--delay: 2">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">About Us</span>
+            <span class="dropdown-link-desc">Our Story & Core Values</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="academics.html" class="dropdown-link-card active" style="--delay: 3">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Academics</span>
+            <span class="dropdown-link-desc">Curriculum & STEM Excellence</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="student-life.html" class="dropdown-link-card" style="--delay: 4">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Student Life</span>
+            <span class="dropdown-link-desc">Clubs, Athletics & Community</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="admissions.html" class="dropdown-link-card" style="--delay: 5">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Admissions & Aid</span>
+            <span class="dropdown-link-desc">5-Step Process & Scholarships</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="gallery.html" class="dropdown-link-card" style="--delay: 6">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Photo Gallery</span>
+            <span class="dropdown-link-desc">STEM, Sports & Campus Visuals</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="blog.html" class="dropdown-link-card" style="--delay: 7">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Blog & News</span>
+            <span class="dropdown-link-desc">Stories, Events & Insights</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="contact.html" class="dropdown-link-card" style="--delay: 8">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Contact & Visit</span>
+            <span class="dropdown-link-desc">Location, Hours & Inquiries</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+      </nav>
+
+      <div class="dropdown-cta-bar">
+        <button class="btn btn-apply btn-sm dropdown-cta-btn" data-open-modal="applyModal">
+          <span>APPLY NOW</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-outline-green btn-sm dropdown-cta-btn" data-open-modal="tourModal">
+          <span>Book Campus Visit</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a> <span>/</span> <span>Academics</span>
+        </div>
+        <h1 class="section-title">Academic Excellence</h1>
+        <p class="section-subtitle">
+          Curriculum pathways designed to inspire inquiry, build mastery, and prepare scholars for global impact.
+        </p>
+      </div>
+    </section>
+
+    <!-- Academic Divisions Grid -->
+    <section class="section-wrapper white-bg">
+      <div class="container">
+        <div class="section-header-block text-center center-block">
+          <span class="section-label">Learning Stages</span>
+          <h2 class="section-title">Divisions of <span class="text-green">Learning</span></h2>
+          <p class="section-subtitle center-block">
+            Structured stages providing tailored pedagogy, close mentorship, and comprehensive developmental support.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 4rem;">
+          <!-- Division 1: Early Years -->
+          <div class="story-layout">
+            <div class="story-media-column">
+              <div class="story-main-image">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1000&auto=format&fit=crop" alt="Early childhood kindergarten">
+              </div>
+            </div>
+            <div>
+              <span class="section-label">Ages 3 - 5 • Foundation Stage</span>
+              <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.85rem;">Early Childhood & Kindergarten</h3>
+              <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                Our Early Childhood program establishes secure social-emotional roots, early literacy, and numeracy through hands-on, play-guided inquiry.
+              </p>
+              <div class="academic-bullet-points">
+                <div class="academic-bullet-item">✓ Phonics, storytelling, and early language development</div>
+                <div class="academic-bullet-item">✓ Sensory exploration gardens and motor-skill mastery</div>
+                <div class="academic-bullet-item">✓ Nurturing, small-ratio classrooms with childhood specialists</div>
+              </div>
+              <button class="btn btn-primary" data-open-modal="applyModal">Enroll in Early Childhood</button>
+            </div>
+          </div>
+
+          <!-- Division 2: Primary School -->
+          <div class="story-layout" style="direction: rtl;">
+            <div class="story-media-column" style="direction: ltr;">
+              <div class="story-main-image">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1000&auto=format&fit=crop" alt="Primary school students">
+              </div>
+            </div>
+            <div style="direction: ltr;">
+              <span class="section-label">Grades 1 - 6 • Elementary Mastery</span>
+              <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.85rem;">Primary School</h3>
+              <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                Rigorous fundamentals in mathematics, laboratory sciences, literature, computational logic, and cultural arts.
+              </p>
+              <div class="academic-bullet-points">
+                <div class="academic-bullet-item">✓ Accelerated reading clinics and writing workshops</div>
+                <div class="academic-bullet-item">✓ Applied science experiments and introductory robotics</div>
+                <div class="academic-bullet-item">✓ Values formation and peer collaboration exercises</div>
+              </div>
+              <button class="btn btn-primary" data-open-modal="applyModal">Apply for Primary School</button>
+            </div>
+          </div>
+
+          <!-- Division 3: Junior & Senior Secondary -->
+          <div class="story-layout">
+            <div class="story-media-column">
+              <div class="story-main-image">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop" alt="Secondary high school students">
+              </div>
+            </div>
+            <div>
+              <span class="section-label">Grades 7 - 12 • College & Career Prep</span>
+              <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.85rem;">Junior & Senior High School</h3>
+              <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                Advanced academic tracks designed for national exam distinctions, university scholarships, and future career leadership.
+              </p>
+              <div class="academic-bullet-points">
+                <div class="academic-bullet-item">✓ Advanced STEM, Business, Humanities, and Technical tracks</div>
+                <div class="academic-bullet-item">✓ University application counseling and global scholarship prep</div>
+                <div class="academic-bullet-item">✓ Capstone research solving local community challenges</div>
+              </div>
+              <button class="btn btn-primary" data-open-modal="applyModal">Apply for Secondary School</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEM & Innovation Lab Highlight -->
+    <section class="section-wrapper surface-bg">
+      <div class="container">
+        <div class="section-header-block text-center center-block">
+          <span class="section-label accent">Future Skills</span>
+          <h2 class="section-title">STEM & <span class="text-green">Innovation Labs</span></h2>
+          <p class="section-subtitle center-block">
+            Every FKND learner is trained in modern digital literacy, coding, and hands-on technological tinkering.
+          </p>
+        </div>
+
+        <div class="difference-quad-grid">
+          <div class="diff-card-item">
+            <div class="diff-icon-circle">💻</div>
+            <h3>Coding & Software</h3>
+            <p>Python fundamentals, web engineering, and digital application design.</p>
+          </div>
+          <div class="diff-card-item">
+            <div class="diff-icon-circle">🤖</div>
+            <h3>Robotics & Electronics</h3>
+            <p>Hands-on circuit design, microcontrollers, and regional robotics competitions.</p>
+          </div>
+          <div class="diff-card-item">
+            <div class="diff-icon-circle">🔬</div>
+            <h3>Science Laboratories</h3>
+            <p>Fully equipped Physics, Chemistry, and Biology inquiry stations.</p>
+          </div>
+          <div class="diff-card-item">
+            <div class="diff-icon-circle">🎨</div>
+            <h3>Creative Studios</h3>
+            <p>Fine art, ceramics, graphic design, and musical performance suites.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-columns">
+        <div>
+          <div class="footer-crest-frame">
+            <img src="logo.jpeg" alt="FKND Crest">
+          </div>
+          <div class="footer-centre-name">FKND FOUNDATION</div>
+          <span class="footer-centre-motto">“Hope for a Cut Down Tree” 🌱</span>
+          <p class="footer-mission-blurb">
+            A premier non-profit learning sanctuary providing world-class holistic education, character formation, and restorative opportunities.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Explore FKND</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="about.html" class="footer-link-item">About Us</a></li>
+            <li><a href="academics.html" class="footer-link-item">Academics</a></li>
+            <li><a href="admissions.html" class="footer-link-item">Admissions</a></li>
+            <li><a href="student-life.html" class="footer-link-item">Student Life</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Admissions</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="admissions.html" class="footer-link-item">How to Apply</a></li>
+            <li><a href="admissions.html#scholarships" class="footer-link-item">Scholarships & Aid</a></li>
+            <li><a href="#" class="footer-link-item" data-open-modal="tourModal">Book a Visit</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Office</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Stay Connected</h4>
+          <div class="footer-newsletter-wrap">
+            <p>Subscribe for termly academic achievements and event schedules.</p>
+            <form class="footer-email-box" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-bar">
+        <div>© 2026 FKND Foundation Learning Centre. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Child Safeguarding</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

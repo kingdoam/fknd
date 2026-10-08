@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Life | FKND Foundation Learning Centre</title>
+  <meta name="description" content="Discover student life, athletics, leadership, clubs, and creative arts at FKND Foundation Learning Centre.">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       DALLAS ISD INSPIRED: SPACIOUS CENTERED NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container-spacious">
+      <nav class="nav-wing nav-wing-left" aria-label="Primary Left Navigation">
+        <a href="index.html" class="nav-anchor">Home</a>
+        <a href="about.html" class="nav-anchor">About</a>
+        <a href="contact.html" class="nav-anchor">Contact</a>
+      </nav>
+
+      <a href="index.html" class="nav-center-brand" aria-label="FKND Foundation Learning Centre Homepage">
+        <div class="brand-crest-frame">
+          <img src="logo.jpeg" alt="FKND Foundation Learning Centre Crest">
+        </div>
+      </a>
+
+      <nav class="nav-wing nav-wing-right" aria-label="Primary Right Navigation">
+        <a href="admissions.html" class="nav-anchor">Admissions</a>
+        <a href="gallery.html" class="nav-anchor">Gallery</a>
+        <a href="blog.html" class="nav-anchor">Blog</a>
+        <button class="btn btn-apply btn-sm nav-apply-btn" data-open-modal="applyModal">
+          APPLY NOW
+        </button>
+        <button class="nav-menu-btn" id="desktopNavMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+          <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+            <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+            <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+            <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <span class="menu-label-text">
+            <span class="label-open">Menu</span>
+            <span class="label-close">Close</span>
+          </span>
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+        <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+          <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span class="menu-label-text">
+          <span class="label-open">Menu</span>
+          <span class="label-close">Close</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Backdrop Scrim Overlay -->
+    <div class="site-dropdown-backdrop" id="siteDropdownBackdrop" aria-hidden="true"></div>
+
+    <!-- Floating Dropdown Menu Card (Desktop & Mobile - Complete Navigation Grid) -->
+    <div class="site-dropdown-menu" id="siteDropdownMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+      <div class="dropdown-status-banner">
+        <span class="status-pulse-dot"></span>
+        <span class="status-text">Admissions Open &bull; 2026/2027 Year</span>
+        <a href="admissions.html" class="status-link">Apply &rarr;</a>
+      </div>
+
+      <div class="dropdown-menu-header">
+        <div class="dropdown-brand-mini">
+          <img src="logo.jpeg" alt="FKND Crest">
+          <div>
+            <strong>FKND LEARNING CENTRE</strong>
+            <span>“Hope for a Cut Down Tree”</span>
+          </div>
+        </div>
+        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close menu">✕</button>
+      </div>
+
+      <nav class="dropdown-links-grid" aria-label="Site Links">
+        <a href="index.html" class="dropdown-link-card" style="--delay: 1">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Home</span>
+            <span class="dropdown-link-desc">Overview & Welcome</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="about.html" class="dropdown-link-card" style="--delay: 2">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">About Us</span>
+            <span class="dropdown-link-desc">Our Story & Core Values</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="academics.html" class="dropdown-link-card" style="--delay: 3">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Academics</span>
+            <span class="dropdown-link-desc">Curriculum & STEM Excellence</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="student-life.html" class="dropdown-link-card active" style="--delay: 4">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Student Life</span>
+            <span class="dropdown-link-desc">Clubs, Athletics & Community</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="admissions.html" class="dropdown-link-card" style="--delay: 5">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Admissions & Aid</span>
+            <span class="dropdown-link-desc">5-Step Process & Scholarships</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="gallery.html" class="dropdown-link-card" style="--delay: 6">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Photo Gallery</span>
+            <span class="dropdown-link-desc">STEM, Sports & Campus Visuals</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="blog.html" class="dropdown-link-card" style="--delay: 7">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Blog & News</span>
+            <span class="dropdown-link-desc">Stories, Events & Insights</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="contact.html" class="dropdown-link-card" style="--delay: 8">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Contact & Visit</span>
+            <span class="dropdown-link-desc">Location, Hours & Inquiries</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+      </nav>
+
+      <div class="dropdown-cta-bar">
+        <button class="btn btn-apply btn-sm dropdown-cta-btn" data-open-modal="applyModal">
+          <span>APPLY NOW</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-outline-green btn-sm dropdown-cta-btn" data-open-modal="tourModal">
+          <span>Book Campus Visit</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a> <span>/</span> <span>Student Life</span>
+        </div>
+        <h1 class="section-title">Whole-Person Flourishing</h1>
+        <p class="section-subtitle">
+          Where lifelong friendships are made, passions discovered, and character proven through vibrant extracurricular life.
+        </p>
+      </div>
+    </section>
+
+    <!-- Student Life Grid -->
+    <section class="section-wrapper white-bg">
+      <div class="container">
+        <div class="life-showcase-grid">
+          <!-- Tile 1: Sports -->
+          <div class="life-tile">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop" alt="School athletics and football">
+            <div class="life-tile-scrim">
+              <span class="life-tile-tag">Athletics</span>
+              <h3 class="life-tile-title">Competitive Sports</h3>
+              <p class="life-tile-desc">Football, track and field, basketball, and fitness training developing teamwork and endurance.</p>
+            </div>
+          </div>
+
+          <!-- Tile 2: Student Clubs -->
+          <div class="life-tile">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop" alt="Student club activities">
+            <div class="life-tile-scrim">
+              <span class="life-tile-tag">Clubs & Societies</span>
+              <h3 class="life-tile-title">Student-Led Clubs</h3>
+              <p class="life-tile-desc">Over 15 active societies including Debate, Journalism, Chess, and Environmental Stewards.</p>
+            </div>
+          </div>
+
+          <!-- Tile 3: Student Leadership -->
+          <div class="life-tile">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop" alt="Student leadership council">
+            <div class="life-tile-scrim">
+              <span class="life-tile-tag">Governance</span>
+              <h3 class="life-tile-title">Leadership Council</h3>
+              <p class="life-tile-desc">Elected student representatives organizing school events, assemblies, and student advocacy.</p>
+            </div>
+          </div>
+
+          <!-- Tile 4: Performing Arts -->
+          <div class="life-tile">
+            <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=800&auto=format&fit=crop" alt="Music and orchestra">
+            <div class="life-tile-scrim">
+              <span class="life-tile-tag">Performing Arts</span>
+              <h3 class="life-tile-title">Music & Theatre</h3>
+              <p class="life-tile-desc">Choir, traditional percussion, drama productions, and annual cultural celebrations.</p>
+            </div>
+          </div>
+
+          <!-- Tile 5: Technology Hub -->
+          <div class="life-tile">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" alt="Students coding">
+            <div class="life-tile-scrim">
+              <span class="life-tile-tag">Innovation</span>
+              <h3 class="life-tile-title">Tech Hub</h3>
+              <p class="life-tile-desc">Weekend coding jams, digital design workshops, and robotics challenges.</p>
+            </div>
+          </div>
+
+          <!-- Tile 6: Community Outreach -->
+          <div class="life-tile">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=800&auto=format&fit=crop" alt="Tree planting campaign">
+            <div class="life-tile-scrim">
+              <span class="life-tile-tag">Service</span>
+              <h3 class="life-tile-title">Community Service</h3>
+              <p class="life-tile-desc">Living our motto: Tree-planting campaigns, neighborhood literacy tutoring, and elder care visits.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <button class="btn btn-apply btn-lg" data-open-modal="applyModal">
+            Join the FKND Community
+          </button>
+          <button class="btn btn-primary btn-lg" data-open-modal="tourModal" style="margin-left: 0.75rem;">
+            Schedule a Visit
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-columns">
+        <div>
+          <div class="footer-crest-frame">
+            <img src="logo.jpeg" alt="FKND Crest">
+          </div>
+          <div class="footer-centre-name">FKND FOUNDATION</div>
+          <span class="footer-centre-motto">“Hope for a Cut Down Tree” 🌱</span>
+          <p class="footer-mission-blurb">
+            A premier non-profit learning sanctuary providing world-class holistic education, character formation, and restorative opportunities.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Explore FKND</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="about.html" class="footer-link-item">About Us</a></li>
+            <li><a href="academics.html" class="footer-link-item">Academics</a></li>
+            <li><a href="admissions.html" class="footer-link-item">Admissions</a></li>
+            <li><a href="student-life.html" class="footer-link-item">Student Life</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Admissions</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="admissions.html" class="footer-link-item">How to Apply</a></li>
+            <li><a href="admissions.html#scholarships" class="footer-link-item">Scholarships & Aid</a></li>
+            <li><a href="#" class="footer-link-item" data-open-modal="tourModal">Book a Visit</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Office</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Stay Connected</h4>
+          <div class="footer-newsletter-wrap">
+            <p>Subscribe for termly updates and student showcases.</p>
+            <form class="footer-email-box" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-bar">
+        <div>© 2026 FKND Foundation Learning Centre. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Child Safeguarding</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

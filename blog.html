@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog, News & Announcements | FKND Foundation Learning Centre</title>
+  <meta name="description" content="Stay updated with the latest news, student achievements, foundation impact stories, and academic announcements at FKND Foundation Learning Centre.">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       DALLAS ISD INSPIRED: SPACIOUS CENTERED NAVBAR
+       Left Wing: Home | About | Contact
+       Center: Prominent FKND Crest Medallion
+       Right Wing: Admissions | Gallery | Blog | APPLY NOW
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container-spacious">
+      <nav class="nav-wing nav-wing-left" aria-label="Primary Left Navigation">
+        <a href="index.html" class="nav-anchor">Home</a>
+        <a href="about.html" class="nav-anchor">About</a>
+        <a href="contact.html" class="nav-anchor">Contact</a>
+      </nav>
+
+      <a href="index.html" class="nav-center-brand" aria-label="FKND Foundation Learning Centre Homepage">
+        <div class="brand-crest-frame">
+          <img src="logo.jpeg" alt="FKND Foundation Learning Centre Crest">
+        </div>
+      </a>
+
+      <nav class="nav-wing nav-wing-right" aria-label="Primary Right Navigation">
+        <a href="admissions.html" class="nav-anchor">Admissions</a>
+        <a href="gallery.html" class="nav-anchor">Gallery</a>
+        <a href="blog.html" class="nav-anchor active">Blog</a>
+        <button class="btn btn-apply btn-sm nav-apply-btn" data-open-modal="applyModal">
+          APPLY NOW
+        </button>
+        <button class="nav-menu-btn" id="desktopNavMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+          <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+            <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+            <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+            <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <span class="menu-label-text">
+            <span class="label-open">Menu</span>
+            <span class="label-close">Close</span>
+          </span>
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+        <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+          <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span class="menu-label-text">
+          <span class="label-open">Menu</span>
+          <span class="label-close">Close</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Backdrop Scrim Overlay -->
+    <div class="site-dropdown-backdrop" id="siteDropdownBackdrop" aria-hidden="true"></div>
+
+    <!-- Floating Dropdown Menu Card (Desktop & Mobile - Complete Navigation Grid) -->
+    <div class="site-dropdown-menu" id="siteDropdownMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+      <div class="dropdown-status-banner">
+        <span class="status-pulse-dot"></span>
+        <span class="status-text">Admissions Open &bull; 2026/2027 Year</span>
+        <a href="admissions.html" class="status-link">Apply &rarr;</a>
+      </div>
+
+      <div class="dropdown-menu-header">
+        <div class="dropdown-brand-mini">
+          <img src="logo.jpeg" alt="FKND Crest">
+          <div>
+            <strong>FKND LEARNING CENTRE</strong>
+            <span>“Hope for a Cut Down Tree”</span>
+          </div>
+        </div>
+        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close menu">✕</button>
+      </div>
+
+      <nav class="dropdown-links-grid" aria-label="Site Links">
+        <a href="index.html" class="dropdown-link-card" style="--delay: 1">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Home</span>
+            <span class="dropdown-link-desc">Overview & Welcome</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="about.html" class="dropdown-link-card" style="--delay: 2">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">About Us</span>
+            <span class="dropdown-link-desc">Our Story & Core Values</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="academics.html" class="dropdown-link-card" style="--delay: 3">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Academics</span>
+            <span class="dropdown-link-desc">Curriculum & STEM Excellence</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="student-life.html" class="dropdown-link-card" style="--delay: 4">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Student Life</span>
+            <span class="dropdown-link-desc">Clubs, Athletics & Community</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="admissions.html" class="dropdown-link-card" style="--delay: 5">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Admissions & Aid</span>
+            <span class="dropdown-link-desc">5-Step Process & Scholarships</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="gallery.html" class="dropdown-link-card" style="--delay: 6">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Photo Gallery</span>
+            <span class="dropdown-link-desc">STEM, Sports & Campus Visuals</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="blog.html" class="dropdown-link-card active" style="--delay: 7">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Blog & News</span>
+            <span class="dropdown-link-desc">Stories, Events & Insights</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="contact.html" class="dropdown-link-card" style="--delay: 8">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Contact & Visit</span>
+            <span class="dropdown-link-desc">Location, Hours & Inquiries</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+      </nav>
+
+      <div class="dropdown-cta-bar">
+        <button class="btn btn-apply btn-sm dropdown-cta-btn" data-open-modal="applyModal">
+          <span>APPLY NOW</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-outline-green btn-sm dropdown-cta-btn" data-open-modal="tourModal">
+          <span>Book Campus Visit</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a> <span>/</span> <span>Blog & News</span>
+        </div>
+        <h1 class="section-title">Stories, News & Foundation Impact</h1>
+        <p class="section-subtitle">
+          Updates, milestones, student achievements, and stories of hope transforming lives at FKND.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Blog Layout -->
+    <section class="section-wrapper white-bg">
+      <div class="container">
+        <div class="blog-layout-grid">
+          
+          <!-- Main Content Column -->
+          <div>
+            
+            <!-- Featured Story: Inclusivity in Education -->
+            <article class="blog-featured-card">
+              <div class="blog-featured-cover">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop" alt="Inclusive mentoring and supportive classroom at FKND">
+                <div style="position: absolute; top: 1.25rem; left: 1.25rem;">
+                  <span class="news-category-badge" style="background: var(--fknd-accent); color: var(--fknd-green-deep); font-weight: 800;">FEATURED INSIGHT</span>
+                </div>
+              </div>
+              <div class="blog-featured-body">
+                <div class="blog-meta-row">
+                  <span class="blog-badge-accent">Inclusivity in Education</span>
+                  <span style="display: inline-flex; align-items: center; gap: 0.35rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    September 18, 2026
+                  </span>
+                  <span style="display: inline-flex; align-items: center; gap: 0.35rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    5 min read
+                  </span>
+                </div>
+                <h2 style="font-size: 1.6rem; color: var(--fknd-green-deep); font-weight: 800; margin-bottom: 0.85rem; line-height: 1.35;">
+                  Inclusivity in Education: Nurturing Potential Without Barriers
+                </h2>
+                <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.65; margin-bottom: 1.5rem;">
+                  Every child deserves the soil, sunlight, and guidance to flourish. True inclusivity transcends physical accessibility—it requires differentiated instruction, psychological safety, and restorative pedagogical practices where learners of all backgrounds and learning profiles feel fundamentally valued, supported, and challenged to achieve academic excellence.
+                </p>
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <img src="logo.jpeg" alt="FKND Editorial" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--fknd-green);">
+                    <div>
+                      <strong style="font-size: 0.88rem; color: var(--fknd-green-deep); display: block;">FKND Academic & Inclusion Council</strong>
+                      <span style="font-size: 0.78rem; color: var(--text-light);">Restorative Pedagogy Department</span>
+                    </div>
+                  </div>
+                  <a href="#" style="color: var(--fknd-green); font-weight: 700; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="event.preventDefault(); alert('Summary: At FKND, inclusive classrooms combine universal design for learning with moral mentorship, ensuring every student has an equal pathway to scholarship.');">
+                    Read Full Article →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Articles Grid: Only Student Health & Class Size/Learning Theories -->
+            <div class="blog-grid-two">
+              
+              <!-- Article 2: Student Health -->
+              <article class="blog-article-card">
+                <div class="blog-article-thumb">
+                  <img src="hero.png" alt="Students engaged in healthy physical recreation and active learning">
+                </div>
+                <div class="blog-article-body">
+                  <div class="blog-meta-row" style="margin-bottom: 0.4rem;">
+                    <span class="blog-badge-accent">Student Health</span>
+                    <span style="font-size: 0.75rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                      Sep 10, 2026
+                    </span>
+                  </div>
+                  <h3 class="blog-article-title">
+                    Student Health: Whole-Child Wellbeing, Nutrition & Mental Stamina
+                  </h3>
+                  <p class="blog-article-excerpt">
+                    Academic success cannot be separated from physical and emotional health. Exploring our integrated approach to clean nutrition, active daily movement, and compassionate counseling that empowers learners to rise above stress.
+                  </p>
+                  <a href="#" style="color: var(--fknd-green); font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.3rem;" onclick="event.preventDefault(); alert('Summary: Student Health at FKND integrates nutrition, physical education, and mental wellbeing support into daily timetables.');">
+                    Read Story →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Article 3: Class Size Importance and Learning Theories -->
+              <article class="blog-article-card">
+                <div class="blog-article-thumb">
+                  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" alt="Small class group engaged in active seminar learning">
+                </div>
+                <div class="blog-article-body">
+                  <div class="blog-meta-row" style="margin-bottom: 0.4rem;">
+                    <span class="blog-badge-accent">Learning Theories</span>
+                    <span style="font-size: 0.75rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                      Aug 25, 2026
+                    </span>
+                  </div>
+                  <h3 class="blog-article-title">
+                    Class Size Importance and Learning Theories in Action
+                  </h3>
+                  <p class="blog-article-excerpt">
+                    Connecting Vygotsky’s social constructivism and cognitive load theory with low educator-to-student ratios. How small classes maximize real-time feedback loops, personalized scaffolding, and mastery learning.
+                  </p>
+                  <a href="#" style="color: var(--fknd-green); font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.3rem;" onclick="event.preventDefault(); alert('Summary: Small class sizes allow teachers to diagnose individual misconceptions immediately, accelerating retention by over 40%.');">
+                    Read Story →
+                  </a>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+
+          <!-- Sidebar Column -->
+          <aside class="blog-sidebar">
+            
+            <!-- Category Filter Widget -->
+            <div class="blog-widget">
+              <h3 class="blog-widget-title">Categories</h3>
+              <ul class="blog-widget-categories">
+                <li><a href="#" onclick="event.preventDefault();"><span>Inclusivity in Education</span> <span class="blog-cat-count">1</span></a></li>
+                <li><a href="#" onclick="event.preventDefault();"><span>Student Health</span> <span class="blog-cat-count">1</span></a></li>
+                <li><a href="#" onclick="event.preventDefault();"><span>Class Size Importance</span> <span class="blog-cat-count">1</span></a></li>
+                <li><a href="#" onclick="event.preventDefault();"><span>Learning Theories</span> <span class="blog-cat-count">1</span></a></li>
+              </ul>
+            </div>
+
+            <!-- Important Dates / Term Calendar -->
+            <div class="blog-widget" style="background: linear-gradient(135deg, var(--fknd-green-deep), var(--fknd-green-dark)); color: #FFFFFF; border: none;">
+              <h3 class="blog-widget-title" style="color: #FFFFFF; border-color: rgba(255, 255, 255, 0.25);">Upcoming Key Dates</h3>
+              <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.88rem;">
+                <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                  <div style="background: var(--fknd-accent); color: var(--fknd-green-deep); font-weight: 800; padding: 0.35rem 0.6rem; border-radius: 6px; text-align: center; min-width: 45px;">
+                    <div style="font-size: 0.7rem; text-transform: uppercase;">OCT</div>
+                    <div style="font-size: 1.1rem; line-height: 1;">05</div>
+                  </div>
+                  <div>
+                    <strong>Admissions Open House</strong>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.8rem; margin: 0.2rem 0 0;">Campus guided tours & meet the faculty.</p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                  <div style="background: var(--fknd-accent); color: var(--fknd-green-deep); font-weight: 800; padding: 0.35rem 0.6rem; border-radius: 6px; text-align: center; min-width: 45px;">
+                    <div style="font-size: 0.7rem; text-transform: uppercase;">OCT</div>
+                    <div style="font-size: 1.1rem; line-height: 1;">24</div>
+                  </div>
+                  <div>
+                    <strong>Annual STEM Science Fair</strong>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.8rem; margin: 0.2rem 0 0;">Exhibition of student inventions & models.</p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                  <div style="background: var(--fknd-accent); color: var(--fknd-green-deep); font-weight: 800; padding: 0.35rem 0.6rem; border-radius: 6px; text-align: center; min-width: 45px;">
+                    <div style="font-size: 0.7rem; text-transform: uppercase;">NOV</div>
+                    <div style="font-size: 1.1rem; line-height: 1;">12</div>
+                  </div>
+                  <div>
+                    <strong>Scholarship Test Date</strong>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.8rem; margin: 0.2rem 0 0;">Placement assessment for incoming applicants.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-apply btn-sm" data-open-modal="tourModal" style="width: 100%; margin-top: 1.25rem;">
+                Book Open House Visit
+              </button>
+            </div>
+
+            <!-- Newsletter Subscription Widget -->
+            <div class="blog-widget">
+              <h3 class="blog-widget-title">Get News by Email</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Receive our monthly digest of student highlights, exam schedules, and foundation events.
+              </p>
+              <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to FKND newsletter!'); this.reset();">
+                <div class="form-group" style="margin-bottom: 0.75rem;">
+                  <input type="email" class="form-input" placeholder="Enter your email address" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Subscribe Now
+                </button>
+              </form>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-columns">
+        <div>
+          <div class="footer-crest-frame">
+            <img src="logo.jpeg" alt="FKND Crest">
+          </div>
+          <div class="footer-centre-name">FKND FOUNDATION</div>
+          <span class="footer-centre-motto">“Hope for a Cut Down Tree” 🌱</span>
+          <p class="footer-mission-blurb">
+            A premier non-profit learning sanctuary providing world-class holistic education, character formation, and restorative opportunities.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Explore FKND</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="about.html" class="footer-link-item">About Us</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Us</a></li>
+            <li><a href="admissions.html" class="footer-link-item">Admissions</a></li>
+            <li><a href="gallery.html" class="footer-link-item">Photo Gallery</a></li>
+            <li><a href="blog.html" class="footer-link-item">Blog & News</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Admissions</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="admissions.html" class="footer-link-item">How to Apply</a></li>
+            <li><a href="admissions.html#scholarships" class="footer-link-item">Scholarships & Aid</a></li>
+            <li><a href="#" class="footer-link-item" data-open-modal="tourModal">Book a Visit</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Office</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Stay Connected</h4>
+          <div class="footer-newsletter-wrap">
+            <p>Subscribe for termly updates and campus event invitations.</p>
+            <form class="footer-email-box" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-bar">
+        <div>© 2026 FKND Foundation Learning Centre. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Child Safeguarding</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Wizard & Tour Modals -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+    <div class="modal-card-box">
+      <div class="modal-top-bar">
+        <h3 id="applyModalTitle">Start Your FKND Application</h3>
+        <button class="modal-close-trigger" aria-label="Close application modal">✕</button>
+      </div>
+      <div class="modal-scroll-body">
+        <div class="wizard-progress-bar">
+          <div class="wizard-step-indicator active"><div class="wizard-step-circle">1</div><span class="wizard-step-label">Student</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">2</div><span class="wizard-step-label">Guardian</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">3</div><span class="wizard-step-label">Academic</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">4</div><span class="wizard-step-label">Submit</span></div>
+        </div>
+        <form id="admissionsWizardForm">
+          <div class="wizard-step-pane" style="display: block;">
+            <div class="form-group"><label>Student Full Legal Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-group"><label>Date of Birth *</label><input type="date" class="form-input" required></div>
+            <div class="form-group">
+              <label>Grade Level Applying For *</label>
+              <select class="form-select" required>
+                <option value="">Select entry level...</option>
+                <option>Early Years (Ages 3-5)</option>
+                <option>Primary School (Grades 1-6)</option>
+                <option>Junior High School (Grades 7-9)</option>
+                <option>Senior High School (Grades 10-12)</option>
+              </select>
+            </div>
+          </div>
+          <div class="wizard-step-pane" style="display: none;">
+            <div class="form-group"><label>Parent / Guardian Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-group"><label>Mobile Phone *</label><input type="tel" class="form-input" required></div>
+          </div>
+          <div class="wizard-step-pane" style="display: none;">
+            <div class="form-group"><label>Previous School Attended</label><input type="text" class="form-input"></div>
+            <div class="form-group"><label>Scholarship Aid Request?</label><select class="form-select"><option>Standard Enrollment</option><option>Foundation Aid Required</option></select></div>
+          </div>
+          <div class="wizard-step-pane" style="display: none;">
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+              <label><input type="checkbox" required checked> Confirm all submitted information is accurate</label>
+            </div>
+          </div>
+          <div class="wizard-button-row">
+            <button type="button" class="btn btn-white btn-sm" id="wizardPrevBtn" style="visibility: hidden;">← Back</button>
+            <button type="button" class="btn btn-primary" id="wizardNextBtn">Continue Next →</button>
+            <button type="submit" class="btn btn-apply" id="wizardSubmitBtn" style="display: none;">Submit Application</button>
+          </div>
+        </form>
+        <div id="wizardSuccessPane" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="font-size: 2rem; color: var(--fknd-green);">✓</div>
+          <h3 style="color: var(--fknd-green-dark); margin: 0.5rem 0;">Application Submitted!</h3>
+          <p style="color: var(--text-muted);">Our Admissions office will contact you within 2 business days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="tourModal" role="dialog" aria-modal="true">
+    <div class="modal-card-box">
+      <div class="modal-top-bar">
+        <h3>📅 Book a Campus Visit</h3>
+        <button class="modal-close-trigger">✕</button>
+      </div>
+      <div class="modal-scroll-body">
+        <form id="tourBookingForm">
+          <div class="form-group"><label>Your Full Name *</label><input type="text" class="form-input" required></div>
+          <div class="form-group"><label>Preferred Date *</label><input type="date" class="form-input" required></div>
+          <div class="form-group"><label>Phone Number *</label><input type="tel" class="form-input" required></div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Tour</button>
+        </form>
+        <div id="tourSuccessPane" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="font-size: 2rem; color: var(--fknd-green);">✓</div>
+          <h3 style="color: var(--fknd-green-dark); margin: 0.5rem 0;">Visit Scheduled!</h3>
+          <p style="color: var(--text-muted);">We look forward to welcoming you to our campus grounds.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

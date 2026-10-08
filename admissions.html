@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions & Aid | FKND Foundation Learning Centre</title>
+  <meta name="description" content="Apply to FKND Foundation Learning Centre. 5-step admissions process, scholarships, tuition, and required documents.">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container-spacious">
+      <nav class="nav-wing nav-wing-left" aria-label="Primary Left Navigation">
+        <a href="index.html" class="nav-anchor">Home</a>
+        <a href="about.html" class="nav-anchor">About</a>
+        <a href="contact.html" class="nav-anchor">Contact</a>
+      </nav>
+
+      <a href="index.html" class="nav-center-brand" aria-label="FKND Homepage">
+        <div class="brand-crest-frame">
+          <img src="logo.jpeg" alt="FKND Crest">
+        </div>
+      </a>
+
+      <nav class="nav-wing nav-wing-right" aria-label="Primary Right Navigation">
+        <a href="admissions.html" class="nav-anchor active">Admissions</a>
+        <a href="gallery.html" class="nav-anchor">Gallery</a>
+        <a href="blog.html" class="nav-anchor">Blog</a>
+        <button class="btn btn-apply btn-sm nav-apply-btn" data-open-modal="applyModal">
+          APPLY NOW
+        </button>
+        <button class="nav-menu-btn" id="desktopNavMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+          <span class="menu-label-text">
+            <span class="label-open">Menu</span>
+            <span class="label-close">Close</span>
+          </span>
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+        <span class="menu-label-text">
+          <span class="label-open">Menu</span>
+          <span class="label-close">Close</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Backdrop Overlay -->
+    <div class="site-dropdown-backdrop" id="siteDropdownBackdrop" aria-hidden="true"></div>
+
+    <!-- Navigation Dropdown Menu -->
+    <div class="site-dropdown-menu" id="siteDropdownMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+      <div class="dropdown-status-banner">
+        <span class="status-pulse-dot"></span>
+        <span class="status-text">Admissions Open &bull; 2026/2027</span>
+        <a href="admissions.html" class="status-link">Apply Now &rarr;</a>
+      </div>
+
+      <div class="dropdown-menu-header">
+        <div class="dropdown-brand-mini">
+          <img src="logo.jpeg" alt="FKND Crest">
+          <div>
+            <strong>FKND LEARNING CENTRE</strong>
+            <span>“Hope for a Cut Down Tree”</span>
+          </div>
+        </div>
+        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close menu">&times;</button>
+      </div>
+
+      <nav class="dropdown-links-grid" aria-label="Site Links">
+        <a href="index.html" class="dropdown-link-card">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Home</span>
+            <span class="dropdown-link-desc">Overview & Welcome</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="about.html" class="dropdown-link-card">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">About Us</span>
+            <span class="dropdown-link-desc">Mission & Values</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="academics.html" class="dropdown-link-card">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Academics</span>
+            <span class="dropdown-link-desc">Curriculum & STEM</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="student-life.html" class="dropdown-link-card">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Student Life</span>
+            <span class="dropdown-link-desc">Clubs & Athletics</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="admissions.html" class="dropdown-link-card active">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Admissions & Aid</span>
+            <span class="dropdown-link-desc">Process & Scholarships</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="gallery.html" class="dropdown-link-card">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Gallery</span>
+            <span class="dropdown-link-desc">Campus Photos</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="blog.html" class="dropdown-link-card">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Blog</span>
+            <span class="dropdown-link-desc">News & Updates</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="contact.html" class="dropdown-link-card">
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Contact & Visit</span>
+            <span class="dropdown-link-desc">Location & Hours</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+      </nav>
+
+      <div class="dropdown-cta-bar">
+        <button class="btn btn-apply btn-sm dropdown-cta-btn" data-open-modal="applyModal">
+          Apply Now &rarr;
+        </button>
+        <button class="btn btn-outline-green btn-sm dropdown-cta-btn" data-open-modal="tourModal">
+          Book Visit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         PAGE HERO BANNER (Concise)
+         ========================================================================== -->
+    <section class="page-hero-banner" style="padding: 3rem 0 2rem 0;">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a> <span>/</span> <span>Admissions</span>
+        </div>
+        <h1 class="section-title" style="margin-bottom: 0.5rem;">Admissions & Financial Aid</h1>
+        <p class="section-subtitle" style="margin-bottom: 1.25rem;">
+          Join our learning community. Explore our 5-step application process, scholarships, and requirements.
+        </p>
+
+        <!-- Quick Access Action Buttons -->
+        <div class="contact-hero-pills">
+          <button class="btn btn-apply btn-sm" data-open-modal="applyModal">
+            Apply Online &rarr;
+          </button>
+          <a href="#pipeline" class="contact-pill-btn">
+            Application Process
+          </a>
+          <a href="#scholarships" class="contact-pill-btn">
+            Scholarships & Aid
+          </a>
+          <a href="#tuition" class="contact-pill-btn">
+            Tuition & Plans
+          </a>
+          <button class="contact-pill-btn" data-open-modal="tourModal">
+            Book a Tour
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5-STEP APPLICATION PROCESS (Crisp & Scannable)
+         ========================================================================== -->
+    <section class="section-wrapper white-bg" id="pipeline" style="padding: 2.75rem 0;">
+      <div class="container">
+        <div class="section-header-block text-center center-block" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.25rem;">How to Apply</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0;">Five simple steps from application to enrollment.</p>
+        </div>
+
+        <div class="admissions-pipeline-track" style="margin: 1.75rem 0;">
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">01</div>
+            <h3 class="pipeline-step-title">Eligibility</h3>
+            <p class="pipeline-step-desc">Confirm age and grade requirements.</p>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">02</div>
+            <h3 class="pipeline-step-title">Apply Online</h3>
+            <p class="pipeline-step-desc">Fill out our quick registration form.</p>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">03</div>
+            <h3 class="pipeline-step-title">Documents</h3>
+            <p class="pipeline-step-desc">Provide birth certificate and report cards.</p>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">04</div>
+            <h3 class="pipeline-step-title">Interview</h3>
+            <p class="pipeline-step-desc">Meet our team for a short assessment.</p>
+          </div>
+
+          <div class="pipeline-step-node">
+            <div class="pipeline-step-num">05</div>
+            <h3 class="pipeline-step-title">Enrollment</h3>
+            <p class="pipeline-step-desc">Receive admission letter and welcome pack.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem;">
+          <button class="btn btn-apply" data-open-modal="applyModal">
+            Start Application &rarr;
+          </button>
+          <button class="btn btn-outline-green" data-open-modal="tourModal">
+            Schedule Tour
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOUNDATION SCHOLARSHIPS & AID
+         ========================================================================== -->
+    <section class="section-wrapper white-bg" id="scholarships" style="padding: 2.75rem 0;">
+      <div class="container">
+        <div class="section-header-block text-center center-block" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.25rem;">Scholarships & Aid</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0;">“Hope for a Cut Down Tree” Endowment Fund.</p>
+        </div>
+
+        <div class="scholarship-pillars-grid" style="margin: 1.5rem 0 1.5rem 0;">
+          <!-- Needs-Based -->
+          <div class="scholarship-pillar-card">
+            <span class="news-category-badge" style="align-self: flex-start; margin-bottom: 0.5rem;">Needs-Based</span>
+            <h3 class="scholarship-pillar-title">Family Relief Grants</h3>
+            <p class="scholarship-pillar-desc">
+              Tuition, textbook, and uniform assistance for qualifying families facing economic limitation.
+            </p>
+            <div class="scholarship-eligibility-box">
+              Income assessment required.
+            </div>
+          </div>
+
+          <!-- Merit -->
+          <div class="scholarship-pillar-card">
+            <span class="news-category-badge" style="align-self: flex-start; margin-bottom: 0.5rem;">Merit</span>
+            <h3 class="scholarship-pillar-title">STEM & Academic Awards</h3>
+            <p class="scholarship-pillar-desc">
+              Awarded to students demonstrating exceptional academic promise, leadership, and curiosity.
+            </p>
+            <div class="scholarship-eligibility-box">
+              Top diagnostic assessment scores.
+            </div>
+          </div>
+
+          <!-- Emergency Bridge -->
+          <div class="scholarship-pillar-card">
+            <span class="news-category-badge" style="align-self: flex-start; margin-bottom: 0.5rem;">Emergency</span>
+            <h3 class="scholarship-pillar-title">Emergency Bridge Aid</h3>
+            <p class="scholarship-pillar-desc">
+              Short-term tuition bridge for existing students experiencing sudden family hardship.
+            </p>
+            <div class="scholarship-eligibility-box">
+              Confidential committee review.
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn btn-outline-green btn-sm" data-open-modal="applyModal">
+            Request Scholarship Review &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TUITION INCLUSIONS & VALUE
+         ========================================================================== -->
+    <section class="section-wrapper" id="tuition" style="background: var(--fknd-surface); padding: 2.75rem 0;">
+      <div class="container">
+        <div class="tuition-value-banner" style="padding: 2.25rem;">
+          <div>
+            <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 0.35rem;">All-Inclusive Tuition</h2>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; margin-bottom: 0;">
+              No hidden fees. Every student receives full access to learning tools and campus programs.
+            </p>
+
+            <ul class="tuition-includes-list">
+              <li class="tuition-includes-item"><strong class="text-green">&bull;</strong> Classroom Instruction</li>
+              <li class="tuition-includes-item"><strong class="text-green">&bull;</strong> STEM & Robotics Labs</li>
+              <li class="tuition-includes-item"><strong class="text-green">&bull;</strong> Co-Curricular Clubs</li>
+              <li class="tuition-includes-item"><strong class="text-green">&bull;</strong> Digital Learning Tools</li>
+              <li class="tuition-includes-item"><strong class="text-green">&bull;</strong> Daily Lunch Program</li>
+              <li class="tuition-includes-item"><strong class="text-green">&bull;</strong> Campus Clinic Care</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--fknd-surface-warm); border: 1px solid var(--fknd-border); border-radius: var(--radius-xl); padding: 1.75rem; display: flex; flex-direction: column; gap: 0.85rem;">
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--fknd-green-deep); margin: 0;">Payment Plans</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+              Flexible options: Termly payments, annual upfront discount (5%), or monthly installments.
+            </p>
+            <a href="mailto:admissions@fkndlearning.org" class="btn btn-primary btn-sm" style="align-self: flex-start;">
+              Request Fee Schedule &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ADMISSIONS FAQS
+         ========================================================================== -->
+    <section class="section-wrapper white-bg" style="padding: 2.75rem 0;">
+      <div class="container-narrow">
+        <div class="section-header-block text-center center-block" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 0.25rem;">Admissions FAQ</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Quick answers for prospective families.</p>
+        </div>
+
+        <div class="faq-accordion-group">
+          <!-- FAQ 1 -->
+          <div class="faq-accordion-item active">
+            <button class="faq-accordion-trigger" aria-expanded="true">
+              <span>When is the application deadline?</span>
+              <span class="faq-toggle-arrow">▾</span>
+            </button>
+            <div class="faq-accordion-content">
+              We operate rolling admissions throughout the year. Applying 6 weeks before term start is recommended.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-trigger" aria-expanded="false">
+              <span>What is the student-to-teacher ratio?</span>
+              <span class="faq-toggle-arrow">▾</span>
+            </button>
+            <div class="faq-accordion-content">
+              1:12 in Early Childhood and maximum 1:18 in Primary and Secondary classrooms.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-trigger" aria-expanded="false">
+              <span>Can we tour the school before applying?</span>
+              <span class="faq-toggle-arrow">▾</span>
+            </button>
+            <div class="faq-accordion-content">
+              Yes, tours run Tuesdays and Thursdays at 10:00 AM and 2:00 PM. Use the visit button to reserve.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ADMISSIONS COUNSELING BANNER
+         ========================================================================== -->
+    <section class="section-wrapper" style="padding: 0 0 3.5rem 0;">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, var(--fknd-green-dark) 0%, var(--fknd-green-deep) 100%); color: var(--fknd-white); border-radius: var(--radius-2xl); padding: 2.75rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; box-shadow: var(--shadow-lg);">
+          <div>
+            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--fknd-accent); font-weight: 800; display: block; margin-bottom: 0.35rem;">Admissions Support Desk</span>
+            <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.35rem; color: var(--fknd-white);">Need Assistance with Your Application?</h3>
+            <p style="color: rgba(255,255,255,0.85); font-size: 0.925rem; margin-bottom: 0; max-width: 580px;">
+              Our admissions coordinators are available Monday through Friday (8:00 AM – 4:30 PM EAT) to guide you through registration, scholarship eligibility, and tour bookings.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
+            <a href="tel:+254700000000" class="btn btn-white" style="font-weight: 700;">
+              Call Admissions
+            </a>
+            <a href="contact.html" class="btn btn-outline-green" style="border-color: rgba(255,255,255,0.4); color: var(--fknd-white); font-weight: 700;">
+              Visit Contact Page &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-columns">
+        <div>
+          <div class="footer-crest-frame">
+            <img src="logo.jpeg" alt="FKND Crest">
+          </div>
+          <div class="footer-centre-name">FKND FOUNDATION</div>
+          <span class="footer-centre-motto">“Hope for a Cut Down Tree”</span>
+          <p class="footer-mission-blurb">
+            A non-profit learning sanctuary providing holistic education, character formation, and restorative opportunities.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Explore</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="about.html" class="footer-link-item">About Us</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Us</a></li>
+            <li><a href="admissions.html" class="footer-link-item">Admissions</a></li>
+            <li><a href="gallery.html" class="footer-link-item">Gallery</a></li>
+            <li><a href="blog.html" class="footer-link-item">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Admissions</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="admissions.html" class="footer-link-item">How to Apply</a></li>
+            <li><a href="#scholarships" class="footer-link-item">Scholarships</a></li>
+            <li><a href="#" class="footer-link-item" data-open-modal="tourModal">Book a Tour</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact Office</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Stay Connected</h4>
+          <div class="footer-newsletter-wrap">
+            <p>Get updates and announcements.</p>
+            <form class="footer-email-box" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-bar">
+        <div>&copy; 2026 FKND Foundation Learning Centre. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Child Safeguarding</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS: APPLICATION WIZARD & CAMPUS TOUR
+       ========================================================================== -->
+  <!-- 1. Admissions Wizard Modal -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+    <div class="modal-card-box">
+      <div class="modal-top-bar">
+        <h3 id="applyModalTitle">Student Application</h3>
+        <button class="modal-close-trigger" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-scroll-body">
+        <div class="wizard-progress-bar">
+          <div class="wizard-step-indicator active"><div class="wizard-step-circle">1</div><span class="wizard-step-label">Student</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">2</div><span class="wizard-step-label">Guardian</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">3</div><span class="wizard-step-label">Academic</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">4</div><span class="wizard-step-label">Submit</span></div>
+        </div>
+
+        <form id="admissionsWizardForm">
+          <div class="wizard-step-pane" style="display: block;">
+            <div class="form-group"><label>Student Full Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-group"><label>Date of Birth *</label><input type="date" class="form-input" required></div>
+            <div class="form-group">
+              <label>Grade Level *</label>
+              <select class="form-select" required>
+                <option value="early">Early Childhood</option>
+                <option value="primary">Primary School</option>
+                <option value="junior">Junior High</option>
+                <option value="senior">Senior High</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="wizard-step-pane" style="display: none;">
+            <div class="form-group"><label>Guardian Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-group"><label>Email *</label><input type="email" class="form-input" required></div>
+            <div class="form-group"><label>Phone *</label><input type="tel" class="form-input" required></div>
+          </div>
+
+          <div class="wizard-step-pane" style="display: none;">
+            <div class="form-group"><label>Previous School</label><input type="text" class="form-input"></div>
+            <div class="form-group">
+              <label>Scholarship Request?</label>
+              <select class="form-select">
+                <option>Standard Enrollment</option>
+                <option>Foundation Needs-Based Aid</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="wizard-step-pane" style="display: none;">
+            <div style="background: var(--fknd-surface); border: 1px solid var(--fknd-border); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem; font-size: 0.875rem;">
+              Ready to submit. Our admissions team will contact you to schedule an interview.
+            </div>
+            <label style="font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+              <input type="checkbox" required checked> Information is accurate
+            </label>
+          </div>
+
+          <div class="wizard-button-row">
+            <button type="button" class="btn btn-white btn-sm" id="wizardPrevBtn" style="visibility: hidden;">&larr; Back</button>
+            <button type="button" class="btn btn-primary" id="wizardNextBtn">Next &rarr;</button>
+            <button type="submit" class="btn btn-apply" id="wizardSubmitBtn" style="display: none;">Submit &rarr;</button>
+          </div>
+        </form>
+
+        <div id="wizardSuccessPane" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <h3 style="color: var(--fknd-green-dark); margin: 0.5rem 0;">Application Submitted!</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">We will contact you within 2 business days.</p>
+          <button class="btn btn-primary btn-sm modal-close-trigger" style="margin-top: 1rem;">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Tour Booking Modal -->
+  <div class="modal-overlay" id="tourModal" role="dialog" aria-modal="true" aria-labelledby="tourModalTitle">
+    <div class="modal-card-box">
+      <div class="modal-top-bar">
+        <h3 id="tourModalTitle">Schedule a Campus Visit</h3>
+        <button class="modal-close-trigger" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-scroll-body">
+        <form id="tourBookingForm">
+          <div class="form-group"><label>Parent / Guardian Name *</label><input type="text" class="form-input" required></div>
+          <div class="form-group"><label>Email Address *</label><input type="email" class="form-input" required></div>
+          <div class="form-group"><label>Phone Number *</label><input type="tel" class="form-input" required></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group"><label>Preferred Date *</label><input type="date" class="form-input" required></div>
+            <div class="form-group">
+              <label>Time Slot</label>
+              <select class="form-select">
+                <option>10:00 AM (Morning)</option>
+                <option>02:00 PM (Afternoon)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; justify-content: center;">
+            Confirm Campus Visit
+          </button>
+        </form>
+
+        <div id="tourSuccessPane" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <h3 style="color: var(--fknd-green-dark); margin: 0.5rem 0;">Visit Scheduled!</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">We look forward to meeting you on campus.</p>
+          <button class="btn btn-primary btn-sm modal-close-trigger" style="margin-top: 1rem;">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
