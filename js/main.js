@@ -11,15 +11,22 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Header scroll shadow
+  // 1. Header scroll shadow (optimized with requestAnimationFrame to prevent scroll jitter/shaking)
   const siteHeader = document.querySelector('.site-header');
+  let isScrollingTicking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      siteHeader?.classList.add('scrolled');
-    } else {
-      siteHeader?.classList.remove('scrolled');
+    if (!isScrollingTicking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 15) {
+          siteHeader?.classList.add('scrolled');
+        } else {
+          siteHeader?.classList.remove('scrolled');
+        }
+        isScrollingTicking = false;
+      });
+      isScrollingTicking = true;
     }
-  });
+  }, { passive: true });
 
   // 2. Navigation Menu Dropdown Toggle (Desktop & Mobile)
   const menuToggles = document.querySelectorAll('#mobileNavToggle, #desktopNavMenuBtn, [data-toggle-menu]');
