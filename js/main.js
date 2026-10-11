@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { title: 'Athletics & Sports Program', url: '#student-life', cat: 'Student Life', desc: 'Football, basketball, athletics, teamwork, and character building.' },
     { title: 'Community Outreach & Service', url: '#student-life', cat: 'Student Life', desc: 'Learners actively giving back and transforming local communities.' },
     { title: 'Hope for a Cut Down Tree Story', url: '#our-story', cat: 'About FKNDF', desc: 'The history and restorative mission behind the FKNDF emblem and tree.' },
-    { title: 'Our Core Values (Bishop Dunne Model)', url: '#values', cat: 'Identity', desc: 'Hope, Knowledge, Service, Character, and Impact.' },
+    { title: 'Our Core Values & Beliefs', url: 'about.html#core-values', cat: 'Identity', desc: 'Five foundational beliefs for inclusive education, holistic child development, and life-long learning.' },
     { title: 'Tuition & Foundation Scholarships', url: '#admissions', cat: 'Admissions', desc: 'Needs-based grants, merit support, and foundation endowments.' },
     { title: 'Book a Campus Visit', url: '#', action: () => openModal('tourModal'), cat: 'Visit', desc: 'Schedule a guided tour of our facilities, classrooms, and grounds.' }
   ];
