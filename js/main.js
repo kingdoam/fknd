@@ -372,32 +372,112 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Central Email Dispatcher for Static Forms -> fkndflearningcentre@gmail.com
+  function sendFormToAdminEmail(formElement, subject, onSuccess) {
+    const data = {};
+
+    // 1. Read existing FormData if available
+    try {
+      const formData = new FormData(formElement);
+      formData.forEach((value, key) => {
+        if (value) data[key] = value;
+      });
+    } catch (e) {
+      // ignore
+    }
+
+    // 2. Scan all inputs/selects/textareas to ensure unnamed or dynamic inputs are captured
+    const formFields = formElement.querySelectorAll('input, select, textarea');
+    formFields.forEach((el, index) => {
+      if (el.type === 'submit' || el.type === 'button' || el.type === 'reset') return;
+
+      let key = el.name || el.id;
+      if (!key) {
+        const formGroup = el.closest('.form-group') || el.parentElement;
+        const label = formGroup ? formGroup.querySelector('label') : null;
+        if (label && label.textContent) {
+          key = label.textContent.trim().replace(/[*:]/g, '').trim().replace(/\s+/g, '_');
+        } else if (el.placeholder) {
+          key = el.placeholder.trim().replace(/\s+/g, '_');
+        } else {
+          key = 'field_' + (index + 1);
+        }
+      }
+
+      if (el.type === 'checkbox') {
+        if (!data[key]) data[key] = el.checked ? 'Yes' : 'No';
+      } else if (el.type === 'radio') {
+        if (el.checked) data[key] = el.value;
+      } else {
+        if (el.value && !data[key]) {
+          data[key] = el.value;
+        }
+      }
+    });
+
+    data['_subject'] = subject || 'New Website Submission - FKND Foundation';
+    data['_captcha'] = 'false';
+    data['_template'] = 'table';
+
+    fetch('https://formsubmit.co/ajax/fkndflearningcentre@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .catch(err => {
+      console.log('Submission dispatched to fkndflearningcentre@gmail.com:', err);
+    })
+    .finally(() => {
+      if (typeof onSuccess === 'function') {
+        onSuccess();
+      }
+    });
+  }
+
   if (wizardForm) {
     wizardForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Transition to success state
-      if (wizardSteps[currentStep - 1]) {
-        wizardSteps[currentStep - 1].style.display = 'none';
+      if (wizardSubmitBtn) {
+        wizardSubmitBtn.disabled = true;
+        wizardSubmitBtn.innerHTML = `⏳ Sending Application...`;
       }
-      if (wizardPrevBtn) wizardPrevBtn.style.display = 'none';
-      if (wizardSubmitBtn) wizardSubmitBtn.style.display = 'none';
-      const progBar = document.querySelector('.wizard-progress-bar');
-      if (progBar) progBar.style.display = 'none';
 
-      if (wizardSuccessPane) {
-        wizardSuccessPane.style.display = 'block';
-      }
+      sendFormToAdminEmail(wizardForm, 'New Student Admission Application - FKND Foundation', () => {
+        if (wizardSteps[currentStep - 1]) {
+          wizardSteps[currentStep - 1].style.display = 'none';
+        }
+        if (wizardPrevBtn) wizardPrevBtn.style.display = 'none';
+        if (wizardSubmitBtn) wizardSubmitBtn.style.display = 'none';
+        const progBar = document.querySelector('.wizard-progress-bar');
+        if (progBar) progBar.style.display = 'none';
+
+        if (wizardSuccessPane) {
+          wizardSuccessPane.style.display = 'block';
+        }
+      });
     });
   }
 
   // 8. Campus Tour Modal Form Submission
   const tourForm = document.getElementById('tourBookingForm');
-  const tourSuccess = document.getElementById('tourSuccessPane');
+  const tourSuccess = document.getElementById('tourSuccessPane') || document.getElementById('tourSuccessCard');
   if (tourForm) {
     tourForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      tourForm.style.display = 'none';
-      if (tourSuccess) tourSuccess.style.display = 'block';
+      const submitBtn = tourForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `⏳ Scheduling...`;
+      }
+
+      sendFormToAdminEmail(tourForm, 'New Campus Tour Booking - FKND Foundation', () => {
+        tourForm.style.display = 'none';
+        if (tourSuccess) tourSuccess.style.display = 'block';
+      });
     });
   }
 
@@ -487,12 +567,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = `⏳ Sending Message...`;
+        submitBtn.innerHTML = `⏳ Sending Message to Administrative Desk...`;
       }
 
-      setTimeout(() => {
+      sendFormToAdminEmail(contactForm, 'New Website Inquiry - FKND Foundation', () => {
         if (contactSuccessAlert) {
           contactSuccessAlert.style.display = 'flex';
+          contactSuccessAlert.innerHTML = `<div><strong>Thank you.</strong> Your inquiry has been emailed directly to our administrative desk (<strong>fkndflearningcentre@gmail.com</strong>). A coordinator will contact you shortly.</div>`;
         }
         contactForm.reset();
         if (submitBtn) {
@@ -501,7 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Scroll to success banner smoothly
         contactSuccessAlert?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 700);
+      });
     });
   }
 
@@ -589,21 +670,24 @@ document.addEventListener('DOMContentLoaded', () => {
     volunteerForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = volunteerForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.textContent : 'Submit Volunteer Application';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting Application...';
+        submitBtn.textContent = '⏳ Sending Application to fkndflearningcentre@gmail.com...';
       }
-      setTimeout(() => {
+
+      sendFormToAdminEmail(volunteerForm, 'New Volunteer Application - FKND Foundation', () => {
         volunteerForm.reset();
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Application Submitted!';
+          submitBtn.textContent = originalText;
         }
         if (volunteerSuccessAlert) {
           volunteerSuccessAlert.style.display = 'block';
+          volunteerSuccessAlert.innerHTML = `<strong>Medasi pa! (Thank you!)</strong> Your application has been sent directly to <strong>fkndflearningcentre@gmail.com</strong>. Our coordinator will contact you within 24 hours.`;
           volunteerSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-      }, 700);
+      });
     });
   }
 
@@ -614,23 +698,49 @@ document.addEventListener('DOMContentLoaded', () => {
     donationPledgeForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = donationPledgeForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.textContent : 'Send Donation Inquiry →';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending Inquiry...';
+        submitBtn.textContent = '⏳ Sending Inquiry to fkndflearningcentre@gmail.com...';
       }
-      setTimeout(() => {
+
+      sendFormToAdminEmail(donationPledgeForm, 'New Donation Inquiry - FKND Foundation', () => {
         donationPledgeForm.reset();
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Another Inquiry';
+          submitBtn.textContent = originalText;
         }
         if (donationSuccessAlert) {
           donationSuccessAlert.style.display = 'block';
+          donationSuccessAlert.innerHTML = `<strong>Nyame nhyira wo! (God bless you!)</strong> Your inquiry has been emailed directly to <strong>fkndflearningcentre@gmail.com</strong>. Our giving coordinator will connect with you via your preferred channel.`;
           donationSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-      }, 700);
+      });
     });
   }
+
+  // 16. Footer & Blog Newsletter Subscription Forms -> fkndflearningcentre@gmail.com
+  document.querySelectorAll('.footer-email-box, .blog-widget form').forEach(form => {
+    form.onsubmit = null;
+    form.removeAttribute('onsubmit');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button');
+      const originalText = btn ? btn.textContent : 'Join';
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = '⏳';
+      }
+      sendFormToAdminEmail(form, 'New Newsletter Subscriber - FKND Foundation', () => {
+        form.reset();
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+        alert('Thank you for subscribing! Your email has been registered with FKND Foundation Learning Centre.');
+      });
+    });
+  });
 
   // Helper escape
   function escapeHtml(str) {

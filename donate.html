@@ -298,26 +298,29 @@
               <strong>Nyame nhyira wo! (God bless you!)</strong> Your inquiry has been received. Our giving coordinator will connect with you shortly via your preferred channel.
             </div>
 
-            <form id="donationPledgeForm">
+            <form id="donationPledgeForm" action="https://formsubmit.co/fkndflearningcentre@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New Donation Inquiry - FKND Foundation">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
               <div class="form-group">
                 <label>Your Full Name <span class="required">*</span></label>
-                <input type="text" class="form-input" placeholder="e.g. Kwame or Sarah Mensah" required>
+                <input type="text" name="donor_name" class="form-input" placeholder="e.g. Kwame or Sarah Mensah" required>
               </div>
 
               <div class="form-row-2col">
                 <div class="form-group">
                   <label>Email Address <span class="required">*</span></label>
-                  <input type="email" class="form-input" placeholder="donor@example.com" required>
+                  <input type="email" name="email" class="form-input" placeholder="donor@example.com" required>
                 </div>
                 <div class="form-group">
                   <label>WhatsApp / Phone Number <span class="required">*</span></label>
-                  <input type="tel" class="form-input" placeholder="+233 55 931 4479" required>
+                  <input type="tel" name="phone_whatsapp" class="form-input" placeholder="+233 55 931 4479" required>
                 </div>
               </div>
 
               <div class="form-group">
                 <label>Preferred Contact Channel <span class="required">*</span></label>
-                <select class="form-select" required>
+                <select name="preferred_channel" class="form-select" required>
                   <option value="whatsapp">WhatsApp Message</option>
                   <option value="phone">Direct Phone Call</option>
                   <option value="email">Email</option>
@@ -327,7 +330,7 @@
 
               <div class="form-group">
                 <label>Area You Wish to Support</label>
-                <select class="form-select">
+                <select name="area_of_support" class="form-select">
                   <option value="general">Where Needed Most (Restorative Fund)</option>
                   <option value="tuition">Child Tuition &amp; Scholarship Grants</option>
                   <option value="nutrition">Daily School Meals &amp; Student Nutrition</option>
@@ -340,12 +343,15 @@
 
               <div class="form-group">
                 <label>How Would You Like to Help? <span class="required">*</span></label>
-                <textarea class="form-textarea" rows="3" placeholder="Tell us about your donation interest, how you would like to partner, or any questions you have for our team..." required></textarea>
+                <textarea name="message" class="form-textarea" rows="3" placeholder="Tell us about your donation interest, how you would like to partner, or any questions you have for our team..." required></textarea>
               </div>
 
               <button type="submit" class="btn btn-donate" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; font-size: 0.82rem; border-radius: var(--radius-md);">
                 <span>Send Donation Inquiry &rarr;</span>
               </button>
+              <p style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.45rem; text-align: center;">
+                🔒 Dispatched directly to our administration desk: <strong style="color: var(--fknd-green-dark);">fkndflearningcentre@gmail.com</strong>
+              </p>
             </form>
           </div>
 
@@ -414,8 +420,8 @@
           <h4 class="footer-column-title">Stay Connected</h4>
           <div class="footer-newsletter-wrap">
             <p>Subscribe for termly updates, stories of hope, and campus announcements.</p>
-            <form class="footer-email-box" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
-              <input type="email" placeholder="Your email" required>
+            <form class="footer-email-box" action="https://formsubmit.co/fkndflearningcentre@gmail.com" method="POST">
+              <input type="email" name="subscriber_email" placeholder="Your email" required>
               <button type="submit">Join</button>
             </form>
           </div>
