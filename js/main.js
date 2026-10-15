@@ -240,9 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
     { title: 'STEM & Innovation Lab', url: '#academics', cat: 'Academics', desc: 'Coding, robotics, experiential science, practical discovery.' },
     { title: 'Athletics & Sports Program', url: '#student-life', cat: 'Student Life', desc: 'Football, basketball, athletics, teamwork, and character building.' },
     { title: 'Community Outreach & Service', url: '#student-life', cat: 'Student Life', desc: 'Learners actively giving back and transforming local communities.' },
-    { title: 'Hope for a Cut Down Tree Story', url: '#our-story', cat: 'About FKNDF', desc: 'The history and restorative mission behind the FKNDF emblem and tree.' },
+    { title: 'Volunteer With Us', url: 'volunteer.html', cat: 'Get Involved', desc: 'Serve as an academic tutor, STEM mentor, or community volunteer at FKND Foundation.' },
+    { title: 'Donate & Support FKND Foundation', url: 'donation.html', cat: 'Giving', desc: 'Fund child tuition scholarships, nutrition meals, and STEM labs via MoMo or Bank.' },
+    { title: 'WhatsApp Admissions & Helpdesk', url: 'https://wa.me/233559314479', cat: 'Contact', desc: 'Chat directly with our team on WhatsApp at +233 55 931 4479.' },
+    { title: 'Hope for a Cut Down Tree Story', url: 'about.html', cat: 'About FKND Foundation', desc: 'The history and restorative mission behind the FKND emblem and tree.' },
     { title: 'Our Core Values & Beliefs', url: 'about.html#core-values', cat: 'Identity', desc: 'Five foundational beliefs for inclusive education, holistic child development, and life-long learning.' },
-    { title: 'Tuition & Foundation Scholarships', url: '#admissions', cat: 'Admissions', desc: 'Needs-based grants, merit support, and foundation endowments.' },
+    { title: 'Tuition & Foundation Scholarships', url: 'admissions.html', cat: 'Admissions', desc: 'Needs-based grants, merit support, and foundation endowments.' },
     { title: 'Book a Campus Visit', url: '#', action: () => openModal('tourModal'), cat: 'Visit', desc: 'Schedule a guided tour of our facilities, classrooms, and grounds.' }
   ];
 
@@ -542,6 +545,91 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     updateOfficeStatus();
+  }
+
+  // 13. Donation Interactivity & Copy-to-Clipboard
+  document.querySelectorAll('.tier-option-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.tier-option-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      const amount = card.getAttribute('data-amount');
+      const customInput = document.getElementById('customDonationInput');
+      if (customInput && amount) {
+        customInput.value = amount;
+      }
+    });
+  });
+
+  document.querySelectorAll('.copy-pill-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const textToCopy = btn.getAttribute('data-copy') || '';
+      if (textToCopy && navigator.clipboard) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          const originalText = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.style.background = '#0B8F3C';
+          btn.style.color = '#FFFFFF';
+          btn.style.borderColor = '#0B8F3C';
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.style.color = '';
+            btn.style.borderColor = '';
+          }, 2000);
+        });
+      }
+    });
+  });
+
+  // 14. Volunteer Form Submission Handler
+  const volunteerForm = document.getElementById('volunteerApplicationForm');
+  const volunteerSuccessAlert = document.getElementById('volunteerSuccessAlert');
+  if (volunteerForm) {
+    volunteerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = volunteerForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting Application...';
+      }
+      setTimeout(() => {
+        volunteerForm.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Application Submitted!';
+        }
+        if (volunteerSuccessAlert) {
+          volunteerSuccessAlert.style.display = 'block';
+          volunteerSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 700);
+    });
+  }
+
+  // 15. Donation Pledge Form Submission Handler
+  const donationPledgeForm = document.getElementById('donationPledgeForm');
+  const donationSuccessAlert = document.getElementById('donationSuccessAlert');
+  if (donationPledgeForm) {
+    donationPledgeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = donationPledgeForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending Inquiry...';
+      }
+      setTimeout(() => {
+        donationPledgeForm.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Another Inquiry';
+        }
+        if (donationSuccessAlert) {
+          donationSuccessAlert.style.display = 'block';
+          donationSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 700);
+    });
   }
 
   // Helper escape

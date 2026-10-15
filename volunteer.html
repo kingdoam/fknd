@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer With Us | FKND Foundation Learning Centre</title>
+  <meta name="description" content="Volunteer with FKND Foundation Learning Centre in Mfensi, Ghana. Mentor learners, teach STEM, coach athletics, or support child literacy and nutrition.">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="css/style.css?v=3.7">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SPACIOUS INSTITUTIONAL NAVBAR
+       Left Wing: Home | About | Volunteer | Contact
+       Center: FKND Foundation Crest & Brand
+       Right Wing: Admissions | Gallery | Blog | DONATE | APPLY NOW
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container-spacious">
+      <nav class="nav-wing nav-wing-left" aria-label="Primary Left Navigation">
+        <a href="index.html" class="nav-anchor">Home</a>
+        <a href="about.html" class="nav-anchor">About</a>
+        <a href="admissions.html" class="nav-anchor">Admissions</a>
+        <a href="volunteer.html" class="nav-anchor active">Volunteer</a>
+      </nav>
+
+      <a href="index.html" class="nav-center-brand" aria-label="FKND Foundation Learning Centre Homepage">
+        <div class="brand-crest-frame">
+          <img src="logo.jpeg" alt="FKND Foundation Crest">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">FKND FOUNDATION LEARNING CENTRE</span>
+          <span class="nav-brand-motto">Hope for a Cut Down Tree</span>
+        </div>
+      </a>
+
+      <!-- Right Navigation Wing -->
+      <nav class="nav-wing nav-wing-right" aria-label="Primary Right Navigation">
+        <a href="donation.html" class="nav-anchor">Donations</a>
+        <a href="gallery.html" class="nav-anchor">Gallery</a>
+        <a href="blog.html" class="nav-anchor">Blog</a>
+        <a href="contact.html" class="nav-anchor">Contact</a>
+        <button class="btn btn-apply btn-sm nav-apply-btn" data-open-modal="applyModal">
+          APPLY NOW
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+        <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+          <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span class="menu-label-text">
+          <span class="label-open">Menu</span>
+          <span class="label-close">Close</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Backdrop Scrim Overlay -->
+    <div class="site-dropdown-backdrop" id="siteDropdownBackdrop" aria-hidden="true"></div>
+
+    <!-- Navigation Dropdown Menu -->
+    <div class="site-dropdown-menu" id="siteDropdownMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+      <div class="dropdown-menu-header">
+        <div class="dropdown-brand-mini">
+          <img src="logo.jpeg" alt="FKND Foundation Crest">
+          <div>
+            <strong>FKND FOUNDATION LEARNING CENTRE</strong>
+            <span>“Hope for a Cut Down Tree”</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="dropdown-links-grid" aria-label="Site Links">
+        <a href="index.html" class="dropdown-link-card" style="--delay: 1">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Home</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="about.html" class="dropdown-link-card" style="--delay: 2">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">About</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="volunteer.html" class="dropdown-link-card active" style="--delay: 3">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Volunteer</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="donation.html" class="dropdown-link-card" style="--delay: 4">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Donations & Giving</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="admissions.html" class="dropdown-link-card" style="--delay: 5">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Admissions</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="gallery.html" class="dropdown-link-card" style="--delay: 6">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Gallery</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="blog.html" class="dropdown-link-card" style="--delay: 7">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Blog</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="contact.html" class="dropdown-link-card" style="--delay: 8">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Contact</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+      </nav>
+
+      <div class="dropdown-cta-bar" style="display: flex; gap: 0.75rem;">
+        <a href="donation.html" class="btn btn-donate btn-sm" style="flex: 1;">DONATE NOW</a>
+        <button class="btn btn-apply btn-sm dropdown-cta-btn" data-open-modal="applyModal" style="flex: 1;">APPLY NOW</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner page-hero-volunteer" style="background-image: linear-gradient(180deg, rgba(3, 53, 22, 0.55) 0%, rgba(3, 35, 15, 0.88) 100%), url('10.jpeg'); background-size: cover; background-position: center 25%;">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a> <span>/</span> <span>Get Involved</span> <span>/</span> <span>Volunteer</span>
+        </div>
+        <div class="page-hero-tag">FKND FOUNDATION VOLUNTEER CORPS</div>
+        <h1 class="section-title">Serve, Inspire &amp; Transform Lives</h1>
+        <p class="section-subtitle">
+          Lend your passion, talents, and time to cultivate young minds in Mfensi, Ghana. Every moment you give brings life to our motto: <em>“Hope for a Cut Down Tree.”</em>
+        </p>
+
+        <div class="contact-hero-pills" style="margin-top: 1.5rem;">
+          <a href="#volunteer-form" class="btn btn-apply btn-sm">Apply to Volunteer</a>
+          <a href="donation.html" class="contact-pill-btn">Support with a Donation &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section-wrapper white-bg">
+      <div class="container">
+        <div class="section-header-block text-center center-block">
+          <span class="section-label">Restorative Community Service</span>
+          <h2 class="section-title">Why Volunteer at <span class="text-green">FKND Foundation</span>?</h2>
+          <p class="section-subtitle center-block">
+            At FKND Foundation Learning Centre, we believe education is the greatest restorative force on earth. Whether you are an educator, university student, artisan, healthcare worker, or professional, your presence ignites possibility.
+          </p>
+        </div>
+
+        <!-- 6 Volunteer Opportunity Cards -->
+        <div class="volunteer-roles-grid" style="margin-top: 2.5rem;">
+          
+          <div class="volunteer-role-card">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.5rem;">Academic Tutoring &amp; Literacy</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              Partner with classroom educators to help primary and junior high learners master reading, phonetic pronunciation, storytelling, and foundational mathematics.
+            </p>
+            <div style="margin-top: auto; font-size: 0.8rem; font-weight: 700; color: var(--fknd-green);">
+              Role: Classroom Assistant &bull; 2-4 hrs/wk
+            </div>
+          </div>
+
+          <div class="volunteer-role-card">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.5rem;">STEM &amp; Digital Innovation</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              Introduce students to computers, block-based coding, science fair experiments, and robotics. Empower rural learners with 21st-century technological tools.
+            </p>
+            <div style="margin-top: auto; font-size: 0.8rem; font-weight: 700; color: var(--fknd-green);">
+              Role: Tech Instructor &bull; Flexible Scheduling
+            </div>
+          </div>
+
+          <div class="volunteer-role-card">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.5rem;">Creative Arts &amp; Music</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              Lead creative workshops in traditional Ghanaian drumming, drawing, choir, spoken word, and drama to ignite children’s imagination and self-confidence.
+            </p>
+            <div style="margin-top: auto; font-size: 0.8rem; font-weight: 700; color: var(--fknd-green);">
+              Role: Arts Workshop Lead &bull; After-school
+            </div>
+          </div>
+
+          <div class="volunteer-role-card">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.5rem;">Athletics &amp; Physical Fitness</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              Coach school football teams, organize track &amp; field training, teach sportsmanship, and help our learners develop teamwork, grit, and physical health.
+            </p>
+            <div style="margin-top: auto; font-size: 0.8rem; font-weight: 700; color: var(--fknd-green);">
+              Role: Sports Coach &bull; Tuesdays &amp; Thursdays
+            </div>
+          </div>
+
+          <div class="volunteer-role-card">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.5rem;">Campus Greening &amp; Tree Planting</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              In honor of our emblem “Hope for a Cut Down Tree,” lead tree planting days, tend to our campus school garden, and teach children environmental stewardship.
+            </p>
+            <div style="margin-top: auto; font-size: 0.8rem; font-weight: 700; color: var(--fknd-green);">
+              Role: Sustainability Champion &bull; Weekend Projects
+            </div>
+          </div>
+
+          <div class="volunteer-role-card">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.5rem;">Virtual &amp; International Mentorship</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              Can’t visit Mfensi in person? Support our educators online, host video Q&amp;A sessions, review student essays, or provide teacher training from anywhere in the world.
+            </p>
+            <div style="margin-top: auto; font-size: 0.8rem; font-weight: 700; color: var(--fknd-green);">
+              Role: Remote Mentor &bull; 1 hr/bi-weekly
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works: 4 Easy Steps -->
+    <section class="section-wrapper surface-bg">
+      <div class="container">
+        <div class="section-header-block text-center center-block">
+          <span class="section-label">Clear &amp; Supportive Onboarding</span>
+          <h2 class="section-title">The Volunteer <span class="text-green">Journey</span></h2>
+          <p class="section-subtitle center-block">
+            We make joining the FKND Foundation family seamless, safe, and deeply rewarding.
+          </p>
+        </div>
+
+        <div class="volunteer-steps-timeline">
+          <div class="step-card">
+            <div class="step-number-badge">1</div>
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.4rem;">Submit Application</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+              Fill out the volunteer form below with your background, interests, and availability.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-badge">2</div>
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.4rem;">WhatsApp Chat</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+              Our Volunteer Coordinator connects with you on WhatsApp or phone to align roles and timing.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-badge">3</div>
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.4rem;">Orientation</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+              Learn our campus child safeguarding guidelines, meet the teachers, and receive your schedule.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-badge">4</div>
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.4rem;">Start Impacting</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+              Experience the unmatched joy of watching a child flourish, with service certificates provided.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer Application Form Section -->
+    <section class="section-wrapper white-bg" id="volunteer-form">
+      <div class="container contact-main-grid">
+        <!-- Form Left Column -->
+        <div class="contact-form-card">
+          <div class="contact-form-header">
+            <span class="section-label" style="margin-bottom: 0.5rem;">Join the Volunteer Corps</span>
+            <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.4rem;">Volunteer Application</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Fill in your details to begin your volunteering journey with FKND Foundation Learning Centre.
+            </p>
+          </div>
+
+          <div id="volunteerSuccessAlert" style="display: none; background: #DCFCE7; border: 1px solid #86EFAC; border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem; color: #166534; font-size: 0.92rem;">
+            <strong>Medasi pa! (Thank you!)</strong> Your volunteer application has been received. Our coordinator will contact you via WhatsApp or email within 24 hours.
+          </div>
+
+          <form id="volunteerApplicationForm">
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label>Full Legal Name <span class="required">*</span></label>
+                <input type="text" class="form-input" placeholder="e.g. Abena Mensah" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address <span class="required">*</span></label>
+                <input type="email" class="form-input" placeholder="abena.mensah@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label>WhatsApp / Phone Number <span class="required">*</span></label>
+                <input type="tel" class="form-input" placeholder="+233 55 931 4479" required>
+              </div>
+              <div class="form-group">
+                <label>Current Location / City <span class="required">*</span></label>
+                <input type="text" class="form-input" placeholder="e.g. Kumasi / Accra / International" required>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label>Preferred Volunteer Track <span class="required">*</span></label>
+                <select class="form-select" required>
+                  <option value="literacy">Academic Tutoring &amp; Literacy</option>
+                  <option value="stem">STEM &amp; Computer Literacy</option>
+                  <option value="arts">Creative Arts, Music &amp; Drama</option>
+                  <option value="sports">Athletics &amp; Physical Fitness</option>
+                  <option value="greening">Campus Greening &amp; Tree Planting</option>
+                  <option value="remote">Virtual / International Mentorship</option>
+                  <option value="general">General Support / Where Needed Most</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Estimated Availability <span class="required">*</span></label>
+                <select class="form-select" required>
+                  <option value="weekly">1-2 Days per Week</option>
+                  <option value="weekends">Weekends Only</option>
+                  <option value="summer">School Vacation / Gap Period</option>
+                  <option value="fulltime">Full-Time Intensive (1-3 Months)</option>
+                  <option value="remote">Online Evenings / Flexible</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tell Us About Yourself &amp; Why You Wish to Volunteer <span class="required">*</span></label>
+              <textarea class="form-textarea" rows="4" placeholder="Share your background, skills, hobbies, or what inspires you about our mission..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 1rem; font-weight: 700;">
+              <span>Submit Volunteer Application</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Sidebar Right Column -->
+        <div class="contact-sidebar-wrap">
+          <!-- Benefits Card -->
+          <div class="contact-tour-card">
+            <span class="news-category-badge" style="margin-bottom: 0.75rem; display: inline-block;">Volunteer Perks</span>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.75rem;">
+              What We Offer You
+            </h3>
+            <ul style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; padding-left: 1.2rem; margin: 0 0 1.25rem 0;">
+              <li>Official Certificate of Volunteer Service</li>
+              <li>Academic &amp; Professional Recommendation Letters</li>
+              <li>Teacher mentorship &amp; classroom coaching</li>
+              <li>Authentic cultural immersion in the Ashanti Region</li>
+              <li>Nutritious lunch on active volunteer days</li>
+            </ul>
+            <a href="donation.html" class="btn btn-outline-green btn-sm" style="width: 100%; justify-content: center;">
+              Prefer to Support via Donation?
+            </a>
+          </div>
+
+          <!-- Fast-Track Inquiries Card -->
+          <div class="contact-hotline-card" style="margin-top: 1.5rem; background: linear-gradient(135deg, #065F46 0%, #033516 100%);">
+            <h4 style="color: #FEF3C7; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem;">Fast-Track Inquiries</h4>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 0.88rem; line-height: 1.6; margin-bottom: 0;">
+              Need an instant answer about volunteer accommodations, transport from Kumasi, or group volunteer bookings? Tap the green WhatsApp button at the bottom right corner anytime to chat directly with our coordinator.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       INSTITUTIONAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-columns">
+        <div>
+          <div class="footer-crest-frame">
+            <img src="logo.jpeg" alt="FKND Foundation Crest">
+          </div>
+          <div class="footer-centre-name">FKND FOUNDATION</div>
+          <span class="footer-centre-motto">“Hope for a Cut Down Tree” 🌱</span>
+          <p class="footer-mission-blurb">
+            A premier non-profit learning sanctuary providing world-class holistic education, character formation, and restorative opportunities in Mfensi, Ghana.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Explore FKND Foundation</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="about.html" class="footer-link-item">About &amp; Our Story</a></li>
+            <li><a href="volunteer.html" class="footer-link-item">Volunteer With Us</a></li>
+            <li><a href="donation.html" class="footer-link-item">Support &amp; Donation</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact &amp; Location</a></li>
+            <li><a href="admissions.html" class="footer-link-item">Admissions &amp; Enrollment</a></li>
+            <li><a href="gallery.html" class="footer-link-item">Photo Gallery</a></li>
+            <li><a href="blog.html" class="footer-link-item">Blog &amp; News</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Get Involved</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="volunteer.html" class="footer-link-item">Volunteer Opportunities</a></li>
+            <li><a href="donation.html" class="footer-link-item">Student Scholarships</a></li>
+            <li><a href="#" class="footer-link-item" data-open-modal="tourModal">Book a Campus Visit</a></li>
+            <li><a href="tel:+233559314479" class="footer-link-item">Volunteer Helpdesk</a></li>
+            <li><a href="mailto:fkndflearningcentre@gmail.com" class="footer-link-item" style="word-break: break-all;">fkndflearningcentre@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Stay Connected</h4>
+          <div class="footer-newsletter-wrap">
+            <p>Subscribe for termly updates, stories of hope, and campus announcements.</p>
+            <form class="footer-email-box" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-bar">
+        <div>
+          &copy; 2026 FKND Foundation Learning Centre. All Rights Reserved. Motto: “Hope for a Cut Down Tree”.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Child Safeguarding</a>
+          <a href="#">Terms of Admission</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA Button (Small Round Circular Icon) -->
+  <a href="https://wa.me/233559314479?text=Hello%20FKND%20Foundation,%20I%20am%20interested%20in%20volunteering." class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with FKND Foundation on WhatsApp">
+    <span class="whatsapp-floating-pulse"></span>
+    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.15c-.24.67-1.39 1.28-1.92 1.36-.51.08-1.16.11-3.37-.8-2.4-1-3.95-3.44-4.07-3.6-.12-.16-.98-1.3-0.98-2.48 0-1.18.62-1.76.84-2 .22-.24.48-.3.64-.3.16 0 .32 0 .46.01.15.01.35-.06.55.42.21.49.71 1.73.77 1.86.06.13.1.28.02.44-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.25.25-.11.49.14.24.63 1.04 1.35 1.68.93.83 1.71 1.09 1.95 1.21.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.18 1.25z"/></svg>
+  </a>
+
+  <!-- 4-Step Application Modal -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+    <div class="modal-card-box">
+      <div class="modal-top-bar">
+        <h3 id="applyModalTitle">Start Your FKND Foundation Application</h3>
+        <button class="modal-close-trigger" aria-label="Close application modal">✕</button>
+      </div>
+
+      <div class="modal-scroll-body">
+        <div class="wizard-progress-bar">
+          <div class="wizard-step-indicator active"><div class="wizard-step-circle">1</div><span class="wizard-step-label">Student</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">2</div><span class="wizard-step-label">Guardian</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">3</div><span class="wizard-step-label">Academics</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">4</div><span class="wizard-step-label">Review</span></div>
+        </div>
+
+        <form id="admissionsWizardForm">
+          <div class="wizard-stage-panel active" data-step="1">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 1: Student Information</h4>
+            <div class="form-group"><label>Student Full Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-row-2col">
+              <div class="form-group"><label>Date of Birth *</label><input type="date" class="form-input" required></div>
+              <div class="form-group"><label>Gender *</label><select class="form-select" required><option value="">Select...</option><option value="M">Male</option><option value="F">Female</option></select></div>
+            </div>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-primary wizard-next-step">Next Step &rarr;</button></div>
+          </div>
+          <div class="wizard-stage-panel" data-step="2">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 2: Parent / Guardian</h4>
+            <div class="form-group"><label>Guardian Full Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-row-2col">
+              <div class="form-group"><label>Primary Phone *</label><input type="tel" class="form-input" required></div>
+              <div class="form-group"><label>Email Address *</label><input type="email" class="form-input" required></div>
+            </div>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-outline-green wizard-prev-step">&larr; Back</button><button type="button" class="btn btn-primary wizard-next-step">Next Step &rarr;</button></div>
+          </div>
+          <div class="wizard-stage-panel" data-step="3">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 3: Academic Placement</h4>
+            <div class="form-group"><label>Applying For Division *</label><select class="form-select" required><option value="">Select...</option><option value="crèche">Early Childhood (Crèche / Nursery)</option><option value="primary">Primary School</option><option value="jhs">Junior High School (JHS)</option></select></div>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-outline-green wizard-prev-step">&larr; Back</button><button type="button" class="btn btn-primary wizard-next-step">Review Application &rarr;</button></div>
+          </div>
+          <div class="wizard-stage-panel" data-step="4">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 4: Declaration &amp; Submission</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">By submitting this initial application, you certify that the provided information is accurate.</p>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-outline-green wizard-prev-step">&larr; Back</button><button type="submit" class="btn btn-apply">Submit Application</button></div>
+          </div>
+        </form>
+
+        <div id="wizardSuccessCard" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="font-size: 2.5rem; color: var(--fknd-green); margin-bottom: 0.5rem;">✓</div>
+          <h3 style="color: var(--fknd-green-dark); margin: 0.5rem 0;">Application Received!</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Our admissions office has received your application. We will reach out shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Campus Tour Modal -->
+  <div class="modal-overlay" id="tourModal" role="dialog" aria-modal="true" aria-labelledby="tourModalTitle">
+    <div class="modal-card-box" style="max-width: 520px;">
+      <div class="modal-top-bar">
+        <h3 id="tourModalTitle">Schedule a Campus Visit</h3>
+        <button class="modal-close-trigger" aria-label="Close tour modal">✕</button>
+      </div>
+      <div class="modal-scroll-body">
+        <form id="tourBookingForm" onsubmit="event.preventDefault(); document.getElementById('tourBookingForm').style.display='none'; document.getElementById('tourSuccessCard').style.display='block';">
+          <div class="form-group"><label>Parent / Visitor Name *</label><input type="text" class="form-input" required></div>
+          <div class="form-row-2col">
+            <div class="form-group"><label>Phone Number *</label><input type="tel" class="form-input" required></div>
+            <div class="form-group"><label>Email *</label><input type="email" class="form-input" required></div>
+          </div>
+          <div class="form-row-2col">
+            <div class="form-group"><label>Preferred Date *</label><input type="date" class="form-input" required></div>
+            <div class="form-group"><label>Time Slot *</label><select class="form-select" required><option value="10am">10:00 AM Tour</option><option value="2pm">2:00 PM Tour</option></select></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Campus Visit</button>
+        </form>
+        <div id="tourSuccessCard" style="display: none; text-align: center; padding: 1.5rem 0.5rem;">
+          <div style="font-size: 2.5rem; color: var(--fknd-green);">✓</div>
+          <h3 style="color: var(--fknd-green-dark); margin: 0.5rem 0;">Visit Scheduled</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">We look forward to welcoming you to FKND Foundation Learning Centre in Mfensi!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

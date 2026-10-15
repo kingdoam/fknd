@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support &amp; Donations | FKND Foundation Learning Centre</title>
+  <meta name="description" content="Support FKND Foundation Learning Centre in Mfensi, Ghana. Partner with us to fund child tuition scholarships, wholesome daily meals, uniforms, and STEM education. Contact us directly to donate.">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="css/style.css?v=3.7">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SPACIOUS INSTITUTIONAL NAVBAR
+       Left Wing: Home | About | Admissions | Volunteer
+       Center: FKND Foundation Crest & Brand
+       Right Wing: Donations | Gallery | Blog | Contact | APPLY NOW
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container-spacious">
+      <nav class="nav-wing nav-wing-left" aria-label="Primary Left Navigation">
+        <a href="index.html" class="nav-anchor">Home</a>
+        <a href="about.html" class="nav-anchor">About</a>
+        <a href="admissions.html" class="nav-anchor">Admissions</a>
+        <a href="volunteer.html" class="nav-anchor">Volunteer</a>
+      </nav>
+
+      <a href="index.html" class="nav-center-brand" aria-label="FKND Foundation Learning Centre Homepage">
+        <div class="brand-crest-frame">
+          <img src="logo.jpeg" alt="FKND Foundation Crest">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">FKND FOUNDATION LEARNING CENTRE</span>
+          <span class="nav-brand-motto">Hope for a Cut Down Tree</span>
+        </div>
+      </a>
+
+      <!-- Right Navigation Wing -->
+      <nav class="nav-wing nav-wing-right" aria-label="Primary Right Navigation">
+        <a href="donation.html" class="nav-anchor active">Donations</a>
+        <a href="gallery.html" class="nav-anchor">Gallery</a>
+        <a href="blog.html" class="nav-anchor">Blog</a>
+        <a href="contact.html" class="nav-anchor">Contact</a>
+        <button class="btn btn-apply btn-sm nav-apply-btn" data-open-modal="applyModal">
+          APPLY NOW
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteDropdownMenu">
+        <svg class="hamburger-icon-staggered" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round">
+          <line class="hamburger-line hamburger-line-1" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="hamburger-line hamburger-line-2" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="hamburger-line hamburger-line-3" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span class="menu-label-text">
+          <span class="label-open">Menu</span>
+          <span class="label-close">Close</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Backdrop Scrim Overlay -->
+    <div class="site-dropdown-backdrop" id="siteDropdownBackdrop" aria-hidden="true"></div>
+
+    <!-- Navigation Dropdown Menu -->
+    <div class="site-dropdown-menu" id="siteDropdownMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+      <div class="dropdown-menu-header">
+        <div class="dropdown-brand-mini">
+          <img src="logo.jpeg" alt="FKND Foundation Crest">
+          <div>
+            <strong>FKND FOUNDATION LEARNING CENTRE</strong>
+            <span>“Hope for a Cut Down Tree”</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="dropdown-links-grid" aria-label="Site Links">
+        <a href="index.html" class="dropdown-link-card" style="--delay: 1">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Home</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="about.html" class="dropdown-link-card" style="--delay: 2">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">About</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="volunteer.html" class="dropdown-link-card" style="--delay: 3">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Volunteer</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="donation.html" class="dropdown-link-card active" style="--delay: 4">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Donations &amp; Giving</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="admissions.html" class="dropdown-link-card" style="--delay: 5">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Admissions</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="gallery.html" class="dropdown-link-card" style="--delay: 6">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Gallery</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="blog.html" class="dropdown-link-card" style="--delay: 7">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Blog</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+
+        <a href="contact.html" class="dropdown-link-card" style="--delay: 8">
+          <span class="dropdown-link-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="dropdown-link-text">
+            <span class="dropdown-link-title">Contact</span>
+          </div>
+          <span class="dropdown-link-arrow">&rarr;</span>
+        </a>
+      </nav>
+
+      <div class="dropdown-cta-bar" style="display: flex; gap: 0.75rem;">
+        <a href="donation.html" class="btn btn-donate btn-sm" style="flex: 1;">DONATE NOW</a>
+        <button class="btn btn-apply btn-sm dropdown-cta-btn" data-open-modal="applyModal" style="flex: 1;">APPLY NOW</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner page-hero-donate" style="background-image: linear-gradient(180deg, rgba(3, 53, 22, 0.65) 0%, rgba(3, 35, 15, 0.92) 100%), url('nourish.png'); background-size: cover; background-position: center 30%;">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a> <span>/</span> <span>Support Us</span> <span>/</span> <span>Donations</span>
+        </div>
+        <div class="page-hero-tag">RESTORE OPPORTUNITY &bull; EMPOWER POTENTIAL</div>
+        <h1 class="section-title">Support the Children of FKND Foundation</h1>
+        <p class="section-subtitle">
+          <em>“At least there is hope for a tree: If it is cut down, it will sprout again.”</em> (Job 14:7).<br>
+          Every act of generosity restores dignity and fuels the potential of children who need it most in Mfensi, Ghana.
+        </p>
+
+        <div class="contact-hero-pills" style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#contact-donation-section" class="btn btn-donate btn-sm">Contact Us to Donate &rarr;</a>
+          <a href="https://wa.me/233559314479?text=Hello%20FKND%20Foundation,%20I%20would%20like%20to%20discuss%20making%20a%20donation." class="btn btn-white btn-sm" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Donation Content Grid -->
+    <section class="section-wrapper white-bg" id="contact-donation-section">
+      <div class="container donation-grid-2col">
+        
+        <!-- Left Column: How Support Transforms Lives & Direct Contact (NO PRICES) -->
+        <div>
+          <span class="section-label">Restorative Giving</span>
+          <h2 class="section-title" style="margin-bottom: 0.75rem;">How Your Support <span class="text-green">Transforms Lives</span></h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
+            At FKND Foundation Learning Centre, every child's story is sacred. We do not set fixed prices on hope or learning. Whether you are an individual sponsor, an organization, a church group, or an international friend, we invite you to contact us directly so we can coordinate your gift according to where it will have the greatest impact.
+          </p>
+
+          <!-- Meaningful Causes List (Without Prices) -->
+          <div class="donation-causes-list">
+            <div class="donation-cause-card">
+              <div class="cause-card-body">
+                <h4>Child Tuition &amp; Full Scholarships</h4>
+                <p>Ensure bright, motivated learners facing severe family hardship remain in the classroom without disruption, with tuition fees, exam costs, and academic coaching fully covered.</p>
+              </div>
+            </div>
+
+            <div class="donation-cause-card">
+              <div class="cause-card-body">
+                <h4>Daily Wholesome Meals &amp; Nutrition</h4>
+                <p>Support our school meal program providing warm, nutrient-dense lunches and pure drinking water every single day, so no child is forced to study hungry.</p>
+              </div>
+            </div>
+
+            <div class="donation-cause-card">
+              <div class="cause-card-body">
+                <h4>Uniforms, Bags &amp; Essential Learning Kits</h4>
+                <p>Provide learners with dignified custom green school uniforms, sturdy backpacks, textbooks, exercise books, geometry sets, and writing instruments.</p>
+              </div>
+            </div>
+
+            <div class="donation-cause-card">
+              <div class="cause-card-body">
+                <h4>STEM, Coding &amp; Digital Innovation</h4>
+                <p>Empower rural Ghanaian students with modern computers, coding robotics kits, hands-on science experiment apparatus, and library reading books.</p>
+              </div>
+            </div>
+
+            <div class="donation-cause-card">
+              <div class="cause-card-body">
+                <h4>Campus Facilities &amp; Classroom Expansion</h4>
+                <p>Help expand modern classrooms, clean sanitation facilities, solar power lighting, and restorative recreation grounds for our expanding student body.</p>
+              </div>
+            </div>
+
+            <div class="donation-cause-card">
+              <div class="cause-card-body">
+                <h4>In-Kind &amp; Material Donations</h4>
+                <p>We gratefully welcome in-kind gifts such as desktop computers, laptops, library storybooks, sports equipment, musical instruments, and healthcare kits.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Contact Box (Official Channels) -->
+          <div class="direct-donate-connect-card">
+            <h3>How to Donate: Contact Us Directly</h3>
+            <p>
+              For transparency and accountability, all donations—whether financial or physical materials—are handled directly by our administrative desk. Reach out to us through any of our verified channels below:
+            </p>
+
+            <div class="direct-channels-grid">
+              <a href="https://wa.me/233559314479?text=Hello%20FKND%20Foundation,%20I%20would%20like%20to%20discuss%20making%20a%20donation." class="direct-channel-item" target="_blank" rel="noopener noreferrer">
+                <div class="direct-channel-label">
+                  <span>WhatsApp Coordinator</span>
+                  <strong>+233 55 931 4479</strong>
+                </div>
+              </a>
+
+              <a href="tel:+233559314479" class="direct-channel-item">
+                <div class="direct-channel-label">
+                  <span>Phone Inquiries</span>
+                  <strong>+233 55 931 4479</strong>
+                </div>
+              </a>
+
+              <a href="mailto:fkndflearningcentre@gmail.com?subject=Inquiry%20About%20Donating%20to%20FKND%20Foundation" class="direct-channel-item">
+                <div class="direct-channel-label">
+                  <span>Official Email</span>
+                  <strong>fkndflearningcentre@gmail.com</strong>
+                </div>
+              </a>
+
+              <div class="direct-channel-item" style="cursor: default;">
+                <div class="direct-channel-label">
+                  <span>Campus Location</span>
+                  <strong>Mfensi, Ashanti, Ghana</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Donation Inquiry Form (NO PRICES) -->
+        <div>
+          <div class="contact-form-card" style="box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); border: 2px solid var(--fknd-border); padding: 1.65rem 1.5rem;">
+            <div class="contact-form-header">
+              <span class="section-label" style="margin-bottom: 0.4rem;">Direct Giving Desk</span>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.35rem;">
+                Contact Us to Donate
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.55;">
+                Fill out the brief details below and our coordinator will reach out directly to guide your donation, provide verified details, or arrange handover.
+              </p>
+            </div>
+
+            <div id="donationSuccessAlert" style="display: none; background: #DCFCE7; border: 1px solid #86EFAC; border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem; color: #166534; font-size: 0.85rem;">
+              <strong>Nyame nhyira wo! (God bless you!)</strong> Your inquiry has been received. Our giving coordinator will connect with you shortly via your preferred channel.
+            </div>
+
+            <form id="donationPledgeForm">
+              <div class="form-group">
+                <label>Your Full Name <span class="required">*</span></label>
+                <input type="text" class="form-input" placeholder="e.g. Kwame or Sarah Mensah" required>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label>Email Address <span class="required">*</span></label>
+                  <input type="email" class="form-input" placeholder="donor@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label>WhatsApp / Phone Number <span class="required">*</span></label>
+                  <input type="tel" class="form-input" placeholder="+233 55 931 4479" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Preferred Contact Channel <span class="required">*</span></label>
+                <select class="form-select" required>
+                  <option value="whatsapp">WhatsApp Message</option>
+                  <option value="phone">Direct Phone Call</option>
+                  <option value="email">Email</option>
+                  <option value="visit">Campus Visit (Mfensi)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Area You Wish to Support</label>
+                <select class="form-select">
+                  <option value="general">Where Needed Most (Restorative Fund)</option>
+                  <option value="tuition">Child Tuition &amp; Scholarship Grants</option>
+                  <option value="nutrition">Daily School Meals &amp; Student Nutrition</option>
+                  <option value="uniforms">School Uniforms &amp; Learning Supplies</option>
+                  <option value="stem">STEM Lab, Computers &amp; Science Kits</option>
+                  <option value="building">Campus Sanctuary &amp; Classroom Expansion</option>
+                  <option value="inkind">In-Kind / Material Donation (Books, Gear, Devices)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>How Would You Like to Help? <span class="required">*</span></label>
+                <textarea class="form-textarea" rows="3" placeholder="Tell us about your donation interest, how you would like to partner, or any questions you have for our team..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-donate" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; font-size: 0.82rem; border-radius: var(--radius-md);">
+                <span>Send Donation Inquiry &rarr;</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Stewardship Guarantee Card -->
+          <div class="contact-tour-card" style="margin-top: 1.25rem; background: var(--fknd-surface); padding: 1.35rem 1.45rem;">
+            <span class="news-category-badge" style="background: var(--fknd-green); color: #FFFFFF; margin-bottom: 0.4rem; display: inline-block;">100% Stewardship Guarantee</span>
+            <h4 style="font-size: 0.98rem; font-weight: 800; color: var(--fknd-green-dark); margin-bottom: 0.35rem;">
+              Full Transparency &amp; Direct Accountability
+            </h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.65rem;">
+              Every cedi and material contribution is accounted for by our board of trustees. Donors receive official receipts, periodic photographic updates, and student academic progress reports.
+            </p>
+            <div style="font-size: 0.74rem; font-weight: 700; color: var(--fknd-green-dark);">
+              Registered Non-Profit Education Sanctuary &bull; Mfensi, Ghana
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       INSTITUTIONAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-columns">
+        <div>
+          <div class="footer-crest-frame">
+            <img src="logo.jpeg" alt="FKND Foundation Crest">
+          </div>
+          <div class="footer-centre-name">FKND FOUNDATION</div>
+          <span class="footer-centre-motto">“Hope for a Cut Down Tree” 🌱</span>
+          <p class="footer-mission-blurb">
+            A premier non-profit learning sanctuary providing world-class holistic education, character formation, and restorative opportunities in Mfensi, Ghana.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Explore FKND Foundation</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="about.html" class="footer-link-item">About &amp; Our Story</a></li>
+            <li><a href="volunteer.html" class="footer-link-item">Volunteer With Us</a></li>
+            <li><a href="donation.html" class="footer-link-item">Support &amp; Donation</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact &amp; Location</a></li>
+            <li><a href="admissions.html" class="footer-link-item">Admissions &amp; Enrollment</a></li>
+            <li><a href="gallery.html" class="footer-link-item">Photo Gallery</a></li>
+            <li><a href="blog.html" class="footer-link-item">Blog &amp; News</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Get Involved</h4>
+          <ul class="footer-links-vertical">
+            <li><a href="donation.html" class="footer-link-item">Support &amp; Donate</a></li>
+            <li><a href="volunteer.html" class="footer-link-item">Volunteer Opportunities</a></li>
+            <li><a href="#" class="footer-link-item" data-open-modal="tourModal">Book a Campus Visit</a></li>
+            <li><a href="tel:+233559314479" class="footer-link-item">Giving Desk: +233 55 931 4479</a></li>
+            <li><a href="mailto:fkndflearningcentre@gmail.com" class="footer-link-item" style="word-break: break-all;">fkndflearningcentre@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Stay Connected</h4>
+          <div class="footer-newsletter-wrap">
+            <p>Subscribe for termly updates, stories of hope, and campus announcements.</p>
+            <form class="footer-email-box" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-bar">
+        <div>
+          &copy; 2026 FKND Foundation Learning Centre. All Rights Reserved. Motto: “Hope for a Cut Down Tree”.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Child Safeguarding</a>
+          <a href="#">Terms of Admission</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA Button (Small Round Circular Icon) -->
+  <a href="https://wa.me/233559314479?text=Hello%20FKND%20Foundation,%20I%20would%20like%20to%20support%20with%20a%20donation." class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with FKND Foundation on WhatsApp">
+    <span class="whatsapp-floating-pulse"></span>
+    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.15c-.24.67-1.39 1.28-1.92 1.36-.51.08-1.16.11-3.37-.8-2.4-1-3.95-3.44-4.07-3.6-.12-.16-.98-1.3-0.98-2.48 0-1.18.62-1.76.84-2 .22-.24.48-.3.64-.3.16 0 .32 0 .46.01.15.01.35-.06.55.42.21.49.71 1.73.77 1.86.06.13.1.28.02.44-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.25.25-.11.49.14.24.63 1.04 1.35 1.68.93.83 1.71 1.09 1.95 1.21.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.18 1.25z"/></svg>
+  </a>
+
+  <!-- 4-Step Application Modal -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+    <div class="modal-card-box">
+      <div class="modal-top-bar">
+        <h3 id="applyModalTitle">Start Your FKND Foundation Application</h3>
+        <button class="modal-close-trigger" aria-label="Close application modal">✕</button>
+      </div>
+
+      <div class="modal-scroll-body">
+        <div class="wizard-progress-bar">
+          <div class="wizard-step-indicator active"><div class="wizard-step-circle">1</div><span class="wizard-step-label">Student</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">2</div><span class="wizard-step-label">Guardian</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">3</div><span class="wizard-step-label">Academics</span></div>
+          <div class="wizard-step-indicator"><div class="wizard-step-circle">4</div><span class="wizard-step-label">Review</span></div>
+        </div>
+
+        <form id="admissionsWizardForm">
+          <div class="wizard-stage-panel active" data-step="1">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 1: Student Information</h4>
+            <div class="form-group"><label>Student Full Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-row-2col">
+              <div class="form-group"><label>Date of Birth *</label><input type="date" class="form-input" required></div>
+              <div class="form-group"><label>Gender *</label><select class="form-select" required><option value="">Select...</option><option value="M">Male</option><option value="F">Female</option></select></div>
+            </div>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-primary wizard-next-step">Next Step &rarr;</button></div>
+          </div>
+          <div class="wizard-stage-panel" data-step="2">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 2: Parent / Guardian</h4>
+            <div class="form-group"><label>Guardian Full Name *</label><input type="text" class="form-input" required></div>
+            <div class="form-row-2col">
+              <div class="form-group"><label>Primary Phone *</label><input type="tel" class="form-input" required></div>
+              <div class="form-group"><label>Email Address *</label><input type="email" class="form-input" required></div>
+            </div>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-outline-green wizard-prev-step">&larr; Back</button><button type="button" class="btn btn-primary wizard-next-step">Next Step &rarr;</button></div>
+          </div>
+          <div class="wizard-stage-panel" data-step="3">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 3: Academic Placement</h4>
+            <div class="form-group"><label>Applying For Division *</label><select class="form-select" required><option value="">Select...</option><option value="crèche">Early Childhood (Crèche / Nursery)</option><option value="primary">Primary School</option><option value="jhs">Junior High School (JHS)</option></select></div>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-outline-green wizard-prev-step">&larr; Back</button><button type="button" class="btn btn-primary wizard-next-step">Review Application &rarr;</button></div>
+          </div>
+          <div class="wizard-stage-panel" data-step="4">
+            <h4 style="margin-bottom: 0.85rem; color: var(--fknd-green-dark);">Stage 4: Declaration &amp; Submission</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">By submitting this initial application, you certify that the provided information is accurate.</p>
+            <div class="wizard-nav-btns"><button type="button" class="btn btn-outline-green wizard-prev-step">&larr; Back</button><button type="submit" class="btn btn-apply">Submit Application</button></div>
+          </div>
+        </form>
+
+        <div id="wizardSuccessCard" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="font-size: 2.5rem; color: var(--fknd-green); margin-bottom: 0.5rem;">✓</div>
+          <h3 style="color: var(--fknd-green-dark); margin: 0.5rem 0;">Application Received!</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Our admissions office has received your application. We will reach out shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
