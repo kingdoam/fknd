@@ -1,0 +1,15 @@
+# ==============================================================================
+# robots.txt for FKND Foundation Learning Centre
+# Search Engine Optimization (SEO) & Web Crawler Directives
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+# Direct crawlers to the XML Sitemap
+Sitemap: https://kingdoam.github.io/fknd/sitemap.xml
+# If using a custom domain, update or uncomment the line below:
+# Sitemap: https://fkndfoundation.org/sitemap.xml
+
+# Crawl-delay recommendation for polite indexing
+Crawl-delay: 1
